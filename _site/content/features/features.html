@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Welcome</title>
-  <meta name="description" content="Data Science in Julia">
+  <title>Features</title>
+  <meta name="description" content="">
 
-  <link rel="canonical" href="http://0.0.0.0:4000/data-science-in-julia/">
+  <link rel="canonical" href="http://0.0.0.0:4000/data-science-in-julia/content/features/features.html">
   <link rel="alternate" type="application/rss+xml" title="Data Science in Julia" href="http://0.0.0.0:4000/data-science-in-julia/feed.xml">
 
-  <meta property="og:url"         content="http://0.0.0.0:4000/data-science-in-julia/" />
+  <meta property="og:url"         content="http://0.0.0.0:4000/data-science-in-julia/content/features/features.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Welcome" />
-<meta property="og:description" content="Data Science in Julia" />
+<meta property="og:title"       content="Features" />
+<meta property="og:description" content="" />
 <meta property="og:image"       content="" />
 
 
@@ -25,15 +25,15 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "http://0.0.0.0:4000/data-science-in-julia/",
+    "http://0.0.0.0:4000/data-science-in-julia/content/features/features.html",
   "headline":
-    "Welcome",
+    "Features",
   "datePublished":
-    "2019-04-20T00:08:44-05:00",
+    "2019-04-19T14:10:23-05:00",
   "dateModified":
-    "2019-04-20T00:08:44-05:00",
+    "2019-04-19T14:10:23-05:00",
   "description":
-    "Data Science in Julia",
+    "",
   "author": {
     "@type": "Person",
     "name": "Christopher Pyles"
@@ -143,6 +143,99 @@ initFunction(function () {
 
   <!-- Load Thebelab for interactive widgets -->
   <!-- Include Thebelab for interactive code if it's enabled -->
+
+<script type="text/x-thebe-config">
+    {
+      requestKernel: true,
+      binderOptions: {
+        repo: 'YOUR-ORG/YOUR-REPO',
+        ref: 'master',
+      },
+      kernelOptions: {
+        name: 'python3',
+      }
+    }
+</script>
+<script src="https://unpkg.com/thebelab@0.3.3/lib/index.js"></script>
+<script>
+    /**
+     * Add attributes to Thebelab blocks
+     */
+
+    const initThebelab = () => {
+        const addThebelabToCodeCells = () => {
+            console.log("Adding thebelab to code cells...");
+            // If Thebelab hasn't loaded, wait a bit and try again. This
+            // happens because we load ClipboardJS asynchronously.
+            if (window.thebelab === undefined) {
+                setTimeout(addThebelabToCodeCells, 250)
+            return
+            }
+
+            // If we already detect a Thebelab cell, don't re-run
+            if (document.querySelectorAll('div.thebelab-cell').length > 0) {
+                return;
+            }
+
+            // Find all code cells, replace with Thebelab interactive code cells
+            const codeCells = document.querySelectorAll('.input_area pre')
+            codeCells.forEach((codeCell, index) => {
+                const id = codeCellId(index)
+                codeCell.setAttribute('data-executable', 'true')
+
+                // Figure out the language it uses and add this too
+                var parentDiv = codeCell.parentElement.parentElement;
+                var arrayLength = parentDiv.classList.length;
+                for (var ii = 0; ii < arrayLength; ii++) {
+                    var parts = parentDiv.classList[ii].split('language-');
+                    if (parts.length === 2) {
+                        // If found, assign dataLanguage and break the loop
+                        var dataLanguage = parts[1];
+                        break;
+                    }
+                }
+                codeCell.setAttribute('data-language', dataLanguage)
+
+                // If the code cell is hidden, show it
+                var inputCheckbox = document.querySelector(`input#hidebtn${codeCell.id}`);
+                if (inputCheckbox !== null) {
+                    setCodeCellVisibility(inputCheckbox, 'visible');
+                }
+            });
+
+            // Remove the event listener from the page so keyboard press doesn't
+            // Change page
+            document.removeEventListener('keydown', initPageNav)
+            keyboardListener = false;
+
+            // Init thebelab
+            thebelab.bootstrap();
+
+            // Remove copy buttons since they won't work anymore
+            const copyButtons = document.querySelectorAll('.copybtn')
+            copyButtons.forEach((copyButton, index) => {
+                copyButton.remove();
+            });
+
+            // Remove outputs since they'll be stale
+            const outputs = document.querySelectorAll('.output *, .output')
+            outputs.forEach((output, index) => {
+                output.remove();
+            });
+        }
+
+        // Add event listener for the function to modify code cells
+        const thebelabButton = document.getElementById('interact-button-thebelab');
+        if (thebelabButton === null) {
+            setTimeout(initThebelab, 250)
+        return
+        };
+        thebelabButton.addEventListener('click', addThebelabToCodeCells);
+    }
+
+    // Initialize Thebelab
+    initFunction(initThebelab);
+</script>
 
 
   <!-- Google analytics -->
@@ -418,7 +511,7 @@ initFunction(initQuery);
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry c-sidebar__entry--active"
+        <a class="c-sidebar__entry "
           href="/data-science-in-julia/index.html"
         >
           
@@ -444,7 +537,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/data-science-in-julia/01-builtins/index.html"
+          href="/data-science-in-julia/01-builtins/01-dataframes.html"
         >
           
             1.
@@ -452,69 +545,6 @@ initFunction(initQuery);
           DataFrames in Julia
         </a>
 
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections u-hidden-visually">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/data-science-in-julia/01-builtins/01-dataframes.html"
-                >
-                  
-                  DataFrames.jl
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/data-science-in-julia/01-builtins/02-categorical-arrays.html"
-                >
-                  
-                  Categorical Arrays
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/data-science-in-julia/01-builtins/03-importing-exporting.html"
-                >
-                  
-                  Importing and Exporting Data
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
         
       </li>
 
@@ -535,8 +565,7 @@ initFunction(initQuery);
     <nav class="onthispage">
       <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
       <ul class="toc__menu">
-  <li><a href="#why-julia">Why Julia?</a></li>
-  <li><a href="#scope">Scope</a></li>
+  <li><a href="#quickstart">Quickstart</a></li>
 </ul>
     </nav>
   </aside>
@@ -559,53 +588,29 @@ initFunction(initQuery);
 </div>
 
             
-<div class="buttons">
-
-
-
-
-
-</div>
-
 
             <div class="c-textbook__content">
-              <h1 id="data-science-in-julia">Data Science in Julia</h1>
+              <h1 id="features">Features</h1>
 
-<p><em>by Christopher Pyles</em></p>
+<p>This is a short demonstration textbook to show the general layout / style of textbooks built
+with Jupyter and Jekyll. The markdown files for <em>this</em> page (and others in the textbook) is generated from the notebooks
+with the <code class="highlighter-rouge">scripts/generate_textbook.py</code> script, which is called when you run <code class="highlighter-rouge">make book</code>.</p>
 
-<p>Welcome! This online book is intended to give you an introduction to the forms and packages in the open source language <a href="https://julialang.org">Julia</a> that are useful in data science. This is not intended to give you an thorough introduction to the Julia language, but is intended to build on top of a good understanding of its basic structures and syntax. To learn the language, the Julia website has some <a href="https://julialang.org/learning/">great resources</a> to help you get started.</p>
+<p>The content for the book is contained in a folder in the site’s repository called <code class="highlighter-rouge">content/</code>. It has a
+combination of markdown and Jupyter notebooks. This content is rendered into the textbook that you see here!</p>
 
-<h2 id="why-julia">Why Julia?</h2>
+<p>To begin, click on one of the chapter sections in the sidebar to the left. The first section demonstrates some
+simple functionality of this repository, while the following chapters contain a subset of content from the
+<a href="https://inferentialthinking.com">Foundations in Data Science</a>.</p>
 
-<p>This book focuses on Julia because it integrates many of the great packages of Python with a model that allows for efficient computing and memory use. It borrows some syntax from the proprietary language MATLAB and incorporates that with more streamlined code and the advantageous package community of Python.</p>
+<h2 id="quickstart">Quickstart</h2>
 
-<h2 id="scope">Scope</h2>
-
-<p>This course covers a range of topics related to the practice of data science in Julia. While it will cover the <em>implementation</em> of many statistical models and other complex algorithms, proving and providing the theory behind these models is beyond the scope of this book. This book is mainly intended as a way for individuals already experienced in the field to learn Julia. This book will cover implementation of topics including but not limited to:</p>
-
-<ul>
-  <li>Julia’s Package <code class="highlighter-rouge">DataFrames</code></li>
-  <li><code class="highlighter-rouge">Pandas</code> in Julia</li>
-  <li>Plotting in <code class="highlighter-rouge">PyPlot</code> and <code class="highlighter-rouge">Seaborn</code>
-<!-- * Symbolic Algebra in `SymPy` --></li>
-  <li>Linear Algebra</li>
-  <li>Implementing Models</li>
-  <li>(Basic) Machine Learning with <code class="highlighter-rouge">ScikitLearn</code></li>
-</ul>
+<p>This chapter shows a couple ways to add content to your course textbook. Click on the section headers
+to the left, or on the “next” button below in order to read further.</p>
 
               <nav class="c-page__nav">
   
-    
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="">
-      〈 <span class="u-margin-right-tiny"></span> 
-    </a>
-  
 
-  
-    
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/data-science-in-julia/01-builtins/index">
-      DataFrames in Julia <span class="u-margin-right-tiny"></span> 〉
-    </a>
   
 </nav>
 

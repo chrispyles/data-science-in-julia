@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Welcome</title>
-  <meta name="description" content="Data Science in Julia">
+  <title>DataFrames in Julia</title>
+  <meta name="description" content="DataFrames in Julia">
 
-  <link rel="canonical" href="http://0.0.0.0:4000/data-science-in-julia/">
+  <link rel="canonical" href="http://0.0.0.0:4000/data-science-in-julia/01-builtins/">
   <link rel="alternate" type="application/rss+xml" title="Data Science in Julia" href="http://0.0.0.0:4000/data-science-in-julia/feed.xml">
 
-  <meta property="og:url"         content="http://0.0.0.0:4000/data-science-in-julia/" />
+  <meta property="og:url"         content="http://0.0.0.0:4000/data-science-in-julia/01-builtins/" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Welcome" />
-<meta property="og:description" content="Data Science in Julia" />
+<meta property="og:title"       content="DataFrames in Julia" />
+<meta property="og:description" content="DataFrames in Julia" />
 <meta property="og:image"       content="" />
 
 
@@ -25,15 +25,15 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "http://0.0.0.0:4000/data-science-in-julia/",
+    "http://0.0.0.0:4000/data-science-in-julia/01-builtins/",
   "headline":
-    "Welcome",
+    "DataFrames in Julia",
   "datePublished":
     "2019-04-20T00:08:44-05:00",
   "dateModified":
     "2019-04-20T00:08:44-05:00",
   "description":
-    "Data Science in Julia",
+    "DataFrames in Julia",
   "author": {
     "@type": "Person",
     "name": "Christopher Pyles"
@@ -443,7 +443,7 @@ initFunction(initQuery);
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+        <a class="c-sidebar__entry c-sidebar__entry--active"
           href="/data-science-in-julia/01-builtins/index.html"
         >
           
@@ -461,7 +461,7 @@ initFunction(initQuery);
 
           
 
-          <ul class="c-sidebar__sections u-hidden-visually">
+          <ul class="c-sidebar__sections ">
             
               
               
@@ -531,16 +531,6 @@ initFunction(initQuery);
 <!-- TOC will only show up if it has at least one item -->
 
 
-  <aside class="sidebar__right">
-    <nav class="onthispage">
-      <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
-      <ul class="toc__menu">
-  <li><a href="#why-julia">Why Julia?</a></li>
-  <li><a href="#scope">Scope</a></li>
-</ul>
-    </nav>
-  </aside>
-
 
       
       <main class="c-textbook__page" tabindex="-1">
@@ -569,42 +559,31 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="data-science-in-julia">Data Science in Julia</h1>
+              <h1 id="dataframes-in-julia">DataFrames in Julia</h1>
 
-<p><em>by Christopher Pyles</em></p>
+<p>This chapter focuses on representations of rectangular data and other data abstractions that are unique to Julia. While Julia is known for its implementation of Python packages, this chapter will focus on utilizing the types and packages that Julia makes itself in order to load, view, manipulate, and export data sets. The purpose of this chapter is to develop an understanding of Julia’s own data-specific functionality so that we can understand the tools that underly the packages we will be calling on later.</p>
 
-<p>Welcome! This online book is intended to give you an introduction to the forms and packages in the open source language <a href="https://julialang.org">Julia</a> that are useful in data science. This is not intended to give you an thorough introduction to the Julia language, but is intended to build on top of a good understanding of its basic structures and syntax. To learn the language, the Julia website has some <a href="https://julialang.org/learning/">great resources</a> to help you get started.</p>
-
-<h2 id="why-julia">Why Julia?</h2>
-
-<p>This book focuses on Julia because it integrates many of the great packages of Python with a model that allows for efficient computing and memory use. It borrows some syntax from the proprietary language MATLAB and incorporates that with more streamlined code and the advantageous package community of Python.</p>
-
-<h2 id="scope">Scope</h2>
-
-<p>This course covers a range of topics related to the practice of data science in Julia. While it will cover the <em>implementation</em> of many statistical models and other complex algorithms, proving and providing the theory behind these models is beyond the scope of this book. This book is mainly intended as a way for individuals already experienced in the field to learn Julia. This book will cover implementation of topics including but not limited to:</p>
+<p>This chapter covers the following packages:</p>
 
 <ul>
-  <li>Julia’s Package <code class="highlighter-rouge">DataFrames</code></li>
-  <li><code class="highlighter-rouge">Pandas</code> in Julia</li>
-  <li>Plotting in <code class="highlighter-rouge">PyPlot</code> and <code class="highlighter-rouge">Seaborn</code>
-<!-- * Symbolic Algebra in `SymPy` --></li>
-  <li>Linear Algebra</li>
-  <li>Implementing Models</li>
-  <li>(Basic) Machine Learning with <code class="highlighter-rouge">ScikitLearn</code></li>
+  <li>DataFrames.jl</li>
+  <li>CategoricalArrays.jl</li>
+  <li>CSV.jl</li>
+  <li>JSON.jl</li>
 </ul>
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="">
-      〈 <span class="u-margin-right-tiny"></span> 
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/data-science-in-julia/index">
+      〈 <span class="u-margin-right-tiny"></span> Welcome
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/data-science-in-julia/01-builtins/index">
-      DataFrames in Julia <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/data-science-in-julia/01-builtins/01-dataframes">
+      DataFrames.jl <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

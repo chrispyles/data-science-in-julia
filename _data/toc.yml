@@ -22,35 +22,22 @@
 # See the links below for an example.
 
 # Top-level page
-- title: Home
-  url: /intro
+- title: Welcome
+  url: /index
   not_numbered: true
 
-# External link
-- title: GitHub repository
-  url: https://github.com/jupyter/jupyter-book
-  external: true
-  not_numbered: true
-
-# Adds a searchbar link
-- title: Search
-  search: true
-
-# Divider for meta-pages and content page
 - divider: true
 
-# Add a header and sample content section
-- header: Demo textbook
-
-# A chapter w/ a collection of sections beneath it
-- title: Features and customization
-  url: /features/features
-  not_numbered: true
-  expand_sections: true
+- title: DataFrames in Julia
+  url: /01-builtins/index
+  expend_sections: true
   sections:
-  - title: Markdown files
-    url: /features/markdown
-    not_numbered: true
-  - title: Jupyter notebooks
-    url: /features/notebooks
-    not_numbered: true
+    - title: DataFrames.jl
+      url: /01-builtins/01-dataframes
+      not_numbered: true
+    - title: Categorical Arrays
+      url: /01-builtins/02-categorical-arrays
+      not_numbered: true
+    - title: Importing and Exporting Data
+      url: /01-builtins/03-importing-exporting
+      not_numbered: true
