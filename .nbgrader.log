@@ -1,0 +1,50 @@
+[LabApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[LabApp | INFO] Loading the validate_assignment nbgrader serverextension
+[LabApp | WARNING] JupyterLab server extension not enabled, manually loading...
+[LabApp | INFO] JupyterLab extension loaded from /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyterlab
+[LabApp | INFO] JupyterLab application directory is /Library/Frameworks/Python.framework/Versions/3.6/share/jupyter/lab
+[LabApp | INFO] Serving notebooks from local directory: /Users/chrispyles/GitHub/data-science-in-julia
+[LabApp | INFO] 0 active kernels
+[LabApp | INFO] The Jupyter Notebook is running at:
+[LabApp | INFO] http://localhost:8889/
+[LabApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[LabApp | WARNING] Could not determine jupyterlab build status without nodejs
+[LabApp | WARNING] 404 GET /api/contents/01-builtins?1555963776120 (::1): No such file or directory: 01-builtins
+[LabApp | WARNING] No such file or directory: 01-builtins
+[LabApp | WARNING] 404 GET /api/contents/01-builtins?1555963776120 (::1) 1.91ms referer=http://localhost:8889/lab
+[LabApp | WARNING] 404 GET /api/contents/dependencies.ipynb?content=0&1555963776122 (::1): No such file or directory: dependencies.ipynb
+[LabApp | WARNING] No such file or directory: dependencies.ipynb
+[LabApp | WARNING] 404 GET /api/contents/dependencies.ipynb?content=0&1555963776122 (::1) 1.71ms referer=http://localhost:8889/lab
+[LabApp | WARNING] 404 GET /api/contents/01-builtins/04-missing-data.ipynb?content=0&1555963776124 (::1): No such file or directory: 01-builtins/04-missing-data.ipynb
+[LabApp | WARNING] No such file or directory: 01-builtins/04-missing-data.ipynb
+[LabApp | WARNING] 404 GET /api/contents/01-builtins/04-missing-data.ipynb?content=0&1555963776124 (::1) 1.89ms referer=http://localhost:8889/lab
+[LabApp | WARNING] Failed to fetch package metadata for '@jupyterlab/celltags': URLError(SSLError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:833)'),)
+[LabApp | INFO] Kernel started: e249b320-eb02-4e66-8c03-6c60f1f1f858
+[LabApp | INFO] Adapting to protocol v5.0 for kernel e249b320-eb02-4e66-8c03-6c60f1f1f858
+[LabApp | INFO] Adapting to protocol v5.0 for kernel e249b320-eb02-4e66-8c03-6c60f1f1f858
+[LabApp | INFO] Kernel started: 40112aef-f9e0-4f93-9e2a-e0499ad4b47b
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 40112aef-f9e0-4f93-9e2a-e0499ad4b47b
+[LabApp | INFO] Saving file at /content/01-builtins/01-dataframes.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Kernel started: 97e1b20b-ca42-4379-88a3-5947c0f08afb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 97e1b20b-ca42-4379-88a3-5947c0f08afb
+[LabApp | INFO] Creating new notebook in /content
+[LabApp | INFO] Kernel started: d94ef1ff-3a03-4a9e-b2cb-fe23825dd218
+[LabApp | INFO] Adapting to protocol v5.0 for kernel d94ef1ff-3a03-4a9e-b2cb-fe23825dd218
+[LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 40112aef-f9e0-4f93-9e2a-e0499ad4b47b
+[LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/01-dataframes.ipynb
+[LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 97e1b20b-ca42-4379-88a3-5947c0f08afb
+[LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/02-categorical-arrays.ipynb
+[LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/02-categorical-arrays.ipynb
+[LabApp | INFO] Saving file at /content/solutions.ipynb
