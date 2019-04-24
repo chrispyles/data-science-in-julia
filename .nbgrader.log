@@ -48,3 +48,138 @@
 [LabApp | INFO] Saving file at /content/solutions.ipynb
 [LabApp | INFO] Saving file at /content/01-builtins/02-categorical-arrays.ipynb
 [LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Starting buffering for 97e1b20b-ca42-4379-88a3-5947c0f08afb:6a53efdd-3064-43a8-8045-39d38779d21a
+[LabApp | INFO] Starting buffering for 40112aef-f9e0-4f93-9e2a-e0499ad4b47b:0041ff61-118e-4276-acab-017d9a2e31ab
+[LabApp | INFO] Starting buffering for e249b320-eb02-4e66-8c03-6c60f1f1f858:034090a8-8fa9-4705-84d4-33dde7673996
+[LabApp | INFO] Starting buffering for d94ef1ff-3a03-4a9e-b2cb-fe23825dd218:1d858740-1bde-4399-92c6-c585c7834daa
+[LabApp | INFO] interrupted
+[LabApp | CRITICAL] Shutdown confirmed
+[LabApp | INFO] Shutting down 4 kernels
+[LabApp | INFO] Kernel shutdown: e249b320-eb02-4e66-8c03-6c60f1f1f858
+[LabApp | INFO] Kernel shutdown: 40112aef-f9e0-4f93-9e2a-e0499ad4b47b
+[LabApp | INFO] Kernel shutdown: 97e1b20b-ca42-4379-88a3-5947c0f08afb
+[LabApp | INFO] Kernel shutdown: d94ef1ff-3a03-4a9e-b2cb-fe23825dd218
+[LabApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[LabApp | INFO] Loading the validate_assignment nbgrader serverextension
+[LabApp | WARNING] JupyterLab server extension not enabled, manually loading...
+[LabApp | INFO] JupyterLab extension loaded from /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyterlab
+[LabApp | INFO] JupyterLab application directory is /Library/Frameworks/Python.framework/Versions/3.6/share/jupyter/lab
+[LabApp | INFO] Serving notebooks from local directory: /Users/chrispyles/GitHub/data-science-in-julia
+[LabApp | INFO] 0 active kernels
+[LabApp | INFO] The Jupyter Notebook is running at:
+[LabApp | INFO] http://localhost:8889/
+[LabApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[LabApp | WARNING] Could not determine jupyterlab build status without nodejs
+[LabApp | WARNING] Failed to fetch package metadata for '@jupyterlab/celltags': URLError(SSLError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:833)'),)
+[LabApp | INFO] Kernel started: a543cbc2-0192-4d82-86b4-fde51e44f2c4
+[LabApp | INFO] Kernel started: a24d191f-d014-4249-96f5-c046372292d8
+[LabApp | INFO] Kernel started: 458f4253-4717-4be6-8694-ec84df3c776a
+[LabApp | INFO] Kernel started: 8ef7bd3f-c7d7-434d-afca-1c817f1f36ae
+[LabApp | INFO] Adapting to protocol v5.0 for kernel a543cbc2-0192-4d82-86b4-fde51e44f2c4
+[LabApp | INFO] Adapting to protocol v5.0 for kernel a543cbc2-0192-4d82-86b4-fde51e44f2c4
+[LabApp | INFO] Adapting to protocol v5.0 for kernel a24d191f-d014-4249-96f5-c046372292d8
+[LabApp | INFO] Adapting to protocol v5.0 for kernel a24d191f-d014-4249-96f5-c046372292d8
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 458f4253-4717-4be6-8694-ec84df3c776a
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 458f4253-4717-4be6-8694-ec84df3c776a
+[LabApp | INFO] Kernel started: 1c24c5c8-94ab-4596-aa9d-951e56cd8a2a
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 8ef7bd3f-c7d7-434d-afca-1c817f1f36ae
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 8ef7bd3f-c7d7-434d-afca-1c817f1f36ae
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 1c24c5c8-94ab-4596-aa9d-951e56cd8a2a
+[LabApp | INFO] Saving file at /content/01-builtins/03-importing-exporting.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/03-importing-exporting.ipynb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 1c24c5c8-94ab-4596-aa9d-951e56cd8a2a
+[LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/03-importing-exporting.ipynb
+[LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 1c24c5c8-94ab-4596-aa9d-951e56cd8a2a
+[LabApp | INFO] Saving file at /content/01-builtins/03-importing-exporting.ipynb
+[LabApp | INFO] Saving file at /content/solutions.ipynb
+[LabApp | INFO] Creating new directory in /content
+[LabApp | INFO] Saving file at /content/solutions/01-dataframes-in-julia.ipynb
+[LabApp | INFO] Saving file at /content/solutions/01-dataframes-in-julia.ipynb
+[LabApp | INFO] Creating new notebook in /content/solutions
+[LabApp | INFO] Kernel started: 9a7bb5bf-c773-4fb6-a69c-202c8175baa7
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 9a7bb5bf-c773-4fb6-a69c-202c8175baa7
+[LabApp | INFO] Saving file at /content/solutions/Untitled.ipynb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 458f4253-4717-4be6-8694-ec84df3c776a
+[LabApp | INFO] Saving file at /content/solutions/01-dataframes-in-julia.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Creating new notebook in /content/01-builtins
+[LabApp | INFO] Kernel started: cf6dc7c0-9934-4b44-aad5-9b901452a7e1
+[LabApp | INFO] Adapting to protocol v5.1 for kernel cf6dc7c0-9934-4b44-aad5-9b901452a7e1
+[LabApp | INFO] Adapting to protocol v5.1 for kernel cf6dc7c0-9934-4b44-aad5-9b901452a7e1
+[LabApp | INFO] Creating new notebook in /content/01-builtins
+[LabApp | INFO] Kernel started: 9fafc515-b0be-48a6-87ae-faa030654ffc
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 9fafc515-b0be-48a6-87ae-faa030654ffc
+[LabApp | INFO] Saving file at /content/01-builtins/Untitled.ipynb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 9fafc515-b0be-48a6-87ae-faa030654ffc
+[LabApp | INFO] Saving file at /content/01-builtins/Untitled.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/Untitled1.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/Untitled1.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/Untitled1.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/json_pipeline.jl
+[LabApp | INFO] Saving file at /content/01-builtins/Untitled1.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/Untitled1.ipynb
+[LabApp | INFO] Kernel shutdown: cf6dc7c0-9934-4b44-aad5-9b901452a7e1
+[LabApp | WARNING] delete /content/01-builtins/Untitled.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/test_json_pipeline.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/test_json_pipeline.ipynb
+[LabApp | INFO] Saving file at /content/01-builtins/04-missing-data.ipynb
+[LabApp | INFO] Creating new directory in /content
+[LabApp | INFO] Creating new notebook in /content/01-learn-julia
+[LabApp | INFO] Kernel started: c898b857-e577-43a3-acef-ffd7d77a2f64
+[LabApp | INFO] Adapting to protocol v5.0 for kernel c898b857-e577-43a3-acef-ffd7d77a2f64
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb

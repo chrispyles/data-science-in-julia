@@ -29,9 +29,9 @@
   "headline":
     "Categorical Arrays",
   "datePublished":
-    "2019-04-20T00:08:44-05:00",
+    "2019-04-23T15:50:47-05:00",
   "dateModified":
-    "2019-04-20T00:08:44-05:00",
+    "2019-04-23T15:50:47-05:00",
   "description":
     "Categorical Arrays",
   "author": {
@@ -436,6 +436,10 @@ initFunction(initQuery);
         
       
       
+        <li><h2 class="c-sidebar__title">Rectangular Data</li>
+        
+      
+      
 
       
       
@@ -506,6 +510,77 @@ initFunction(initQuery);
                 >
                   
                   Importing and Exporting Data
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data-science-in-julia/01-builtins/04-missing-data.html"
+                >
+                  
+                  Missing Data
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/data-science-in-julia/solutions/index.html"
+        >
+          
+          Exercise Solutions
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data-science-in-julia/solutions/01-dataframes-in-julia.html"
+                >
+                  
+                  1. DataFrames in Julia
                 </a>
 
                 
@@ -795,7 +870,7 @@ Indivual 1 &lt; Individual 2: false
 
 <h2 id="exercises">Exercises</h2>
 
-<p><strong>Exercise 1.2.1:</strong> Create a categorical array <code class="highlighter-rouge">arr</code> for the midterm grades data set from the last set of exericses.</p>
+<p><strong>Exercise 1.2.1:</strong> Create a categorical array <code class="highlighter-rouge">arr</code> for <code class="highlighter-rouge">Year</code> variable from the midterm grades data set from the last set of exericses.</p>
 
 <table>
   <thead>
@@ -839,6 +914,8 @@ Indivual 1 &lt; Individual 2: false
 <p><strong>Exercise 1.2.3:</strong> Order the levels of the array so that <code class="highlighter-rouge">Freshman</code> is less than <code class="highlighter-rouge">Sophomore</code> is less than <code class="highlighter-rouge">Junior</code> etc.</p>
 
 <p><strong>Exercise 1.2.4:</strong> Test your ordering using <code class="highlighter-rouge">arr[3] &gt; arr[1] == arr[4] &gt; arr[6]</code>. (This should return <code class="highlighter-rouge">true</code>.)</p>
+
+<p><em>Hint:</em> Is your <code class="highlighter-rouge">CategoricalArray</code> ordered?</p>
 
               <nav class="c-page__nav">
   

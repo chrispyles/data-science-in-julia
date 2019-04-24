@@ -407,7 +407,7 @@ If you don't pass a column label to `categorical!`, it converts each column to a
 
 ## Exercises
 
-**Exercise 1.2.1:** Create a categorical array `arr` for the midterm grades data set from the last set of exericses.
+**Exercise 1.2.1:** Create a categorical array `arr` for `Year` variable from the midterm grades data set from the last set of exericses.
 
 | Name | Year | Midterm Grade |
 |-----|-----|-----|
@@ -422,3 +422,5 @@ If you don't pass a column label to `categorical!`, it converts each column to a
 **Exercise 1.2.3:** Order the levels of the array so that `Freshman` is less than `Sophomore` is less than `Junior` etc.
 
 **Exercise 1.2.4:** Test your ordering using `arr[3] > arr[1] == arr[4] > arr[6]`. (This should return `true`.)
+
+_Hint:_ Is your `CategoricalArray` ordered?

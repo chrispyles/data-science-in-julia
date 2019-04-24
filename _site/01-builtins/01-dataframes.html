@@ -29,9 +29,9 @@
   "headline":
     "DataFrames.jl",
   "datePublished":
-    "2019-04-20T00:08:44-05:00",
+    "2019-04-23T15:50:47-05:00",
   "dateModified":
-    "2019-04-20T00:08:44-05:00",
+    "2019-04-23T15:50:47-05:00",
   "description":
     "DataFrames.jl",
   "author": {
@@ -436,6 +436,10 @@ initFunction(initQuery);
         
       
       
+        <li><h2 class="c-sidebar__title">Rectangular Data</li>
+        
+      
+      
 
       
       
@@ -514,6 +518,77 @@ initFunction(initQuery);
               </li>
               
             
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data-science-in-julia/01-builtins/04-missing-data.html"
+                >
+                  
+                  Missing Data
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/data-science-in-julia/solutions/index.html"
+        >
+          
+          Exercise Solutions
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data-science-in-julia/solutions/01-dataframes-in-julia.html"
+                >
+                  
+                  1. DataFrames in Julia
+                </a>
+
+                
+                
+
+              </li>
+              
+            
           </ul>
         
       </li>
@@ -538,7 +613,6 @@ initFunction(initQuery);
   <li><a href="#constructing-a-dataframe">Constructing a DataFrame</a></li>
   <li><a href="#slicing-dataframes">Slicing DataFrames</a>
     <ul>
-      <li><a href="#examples">Examples</a></li>
       <li><a href="#column-labels">Column Labels</a></li>
     </ul>
   </li>
@@ -668,7 +742,7 @@ initFunction(initQuery);
  "M"
 </code></pre></div></div>
 
-<p>As you can see, selecting multiple rows and columns in the slice returns a new DataFrame with the indices reset and selecting a single column returns an array of the values for that column in the selected rows. If you do not pass a tuple to the bracket (e.g. <code class="highlighter-rouge">df[2]</code>), it returns the column at that index. Finally, subsetting a DataFrame to select a single row returns a <code class="highlighter-rouge">DataFrameRow</code> object, which is acts similar to a 1-row DataFrame. The details of this type can be find by calling <code class="highlighter-rouge">?DataFrameRow</code> in Jupyter:</p>
+<p>As you can see, selecting multiple rows and columns in the slice returns a new DataFrame with the indices reset and selecting a single column returns an array of the values for that column in the selected rows. If you do not pass a tuple to the bracket (e.g. <code class="highlighter-rouge">df[2]</code>), it returns the column at that index. Finally, subsetting a DataFrame to select a single row returns a <code class="highlighter-rouge">DataFrameRow</code> object, which is acts similar to a 1-row DataFrame. The details of this type can be find by calling <code class="highlighter-rouge">?DataFrameRow</code> in Jupyter.</p>
 
 <div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># single row, multiple columns</span>
 <span class="n">df</span><span class="x">[</span><span class="mi">3</span><span class="x">,</span><span class="mi">1</span><span class="x">:</span><span class="mi">2</span><span class="x">]</span>
@@ -677,46 +751,6 @@ initFunction(initQuery);
 <div class="output output_html">
 <p>DataFrameRow</p><table class="data-frame"><thead><tr><th></th><th>Sex</th><th>Age</th></tr><tr><th></th><th>String</th><th>Int32</th></tr></thead><tbody><p>1 rows × 2 columns</p><tr><th>3</th><td>M</td><td>20</td></tr></tbody></table>
 </div>
-
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">?</span><span class="n">DataFrameRow</span>
-</code></pre></div></div>
-
-<div class="output output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>search: [0m[1mD[22m[0m[1ma[22m[0m[1mt[22m[0m[1ma[22m[0m[1mF[22m[0m[1mr[22m[0m[1ma[22m[0m[1mm[22m[0m[1me[22m[0m[1mR[22m[0m[1mo[22m[0m[1mw[22m [0m[1mD[22m[0m[1ma[22m[0m[1mt[22m[0m[1ma[22m[0m[1mF[22m[0m[1mr[22m[0m[1ma[22m[0m[1mm[22m[0m[1me[22m [0m[1mD[22m[0m[1ma[22m[0m[1mt[22m[0m[1ma[22m[0m[1mF[22m[0m[1mr[22m[0m[1ma[22m[0m[1mm[22m[0m[1me[22ms Sub[0m[1mD[22m[0m[1ma[22m[0m[1mt[22m[0m[1ma[22m[0m[1mF[22m[0m[1mr[22m[0m[1ma[22m[0m[1mm[22m[0m[1me[22m Groupe[0m[1md[22mD[0m[1ma[22m[0m[1mt[22m[0m[1ma[22m[0m[1mF[22m[0m[1mr[22m[0m[1ma[22m[0m[1mm[22m[0m[1me[22m
-
-
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DataFrameRow{&lt;:AbstractDataFrame,&lt;:AbstractIndex}
-</code></pre></div></div>
-
-<p>A view of one row of an <code class="highlighter-rouge">AbstractDataFrame</code>.</p>
-
-<p>A <code class="highlighter-rouge">DataFrameRow</code> is returned by <code class="highlighter-rouge">getindex</code> or <code class="highlighter-rouge">view</code> functions when one row and a selection of columns are requested, or when iterating the result of the call to the <a href="@ref"><code class="highlighter-rouge">eachrow</code></a> function.</p>
-
-<p>The <code class="highlighter-rouge">DataFrameRow</code> constructor can also be called directly:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DataFrameRow(parent::AbstractDataFrame, row::Integer, cols=:)
-</code></pre></div></div>
-
-<p>A <code class="highlighter-rouge">DataFrameRow</code> supports the iteration interface and can therefore be passed to functions that expect a collection as an argument.</p>
-
-<p>Indexing is one-dimensional like specifying a column of a <code class="highlighter-rouge">DataFrame</code>. You can also access the data in a <code class="highlighter-rouge">DataFrameRow</code> using the <code class="highlighter-rouge">getproperty</code> and <code class="highlighter-rouge">setproperty!</code> functions and convert it to a <code class="highlighter-rouge">NamedTuple</code> using the <code class="highlighter-rouge">copy</code> function.</p>
-
-<p>It is possible to create a <code class="highlighter-rouge">DataFrameRow</code> with duplicate columns. All such columns will have a reference to the same entry in the parent <code class="highlighter-rouge">DataFrame</code>.</p>
-
-<p>If the selection of columns in a parent data frame is passed as <code class="highlighter-rouge">:</code> (a colon) then <code class="highlighter-rouge">DataFrameRow</code> will always have all columns from the parent, even if they are added or removed after its creation.</p>
-
-<h3 id="examples">Examples</h3>
-
-<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="x">(</span><span class="n">a</span> <span class="o">=</span> <span class="n">repeat</span><span class="x">([</span><span class="mi">1</span><span class="x">,</span> <span class="mi">2</span><span class="x">,</span> <span class="mi">3</span><span class="x">,</span> <span class="mi">4</span><span class="x">],</span> <span class="n">outer</span><span class="o">=</span><span class="x">[</span><span class="mi">2</span><span class="x">]),</span>
-               <span class="n">b</span> <span class="o">=</span> <span class="n">repeat</span><span class="x">([</span><span class="mi">2</span><span class="x">,</span> <span class="mi">1</span><span class="x">],</span> <span class="n">outer</span><span class="o">=</span><span class="x">[</span><span class="mi">4</span><span class="x">]),</span>
-               <span class="n">c</span> <span class="o">=</span> <span class="n">randn</span><span class="x">(</span><span class="mi">8</span><span class="x">))</span>
-<span class="n">sdf1</span> <span class="o">=</span> <span class="n">view</span><span class="x">(</span><span class="n">df</span><span class="x">,</span> <span class="mi">2</span><span class="x">,</span> <span class="x">:)</span>
-<span class="n">sdf2</span> <span class="o">=</span> <span class="nd">@view</span> <span class="n">df</span><span class="x">[</span><span class="k">end</span><span class="x">,</span> <span class="x">[:</span><span class="n">a</span><span class="x">]]</span>
-<span class="n">sdf3</span> <span class="o">=</span> <span class="n">eachrow</span><span class="x">(</span><span class="n">df</span><span class="x">)[</span><span class="mi">1</span><span class="x">]</span>
-<span class="n">sdf4</span> <span class="o">=</span> <span class="n">DataFrameRow</span><span class="x">(</span><span class="n">df</span><span class="x">,</span> <span class="mi">2</span><span class="x">,</span> <span class="mi">1</span><span class="x">:</span><span class="mi">2</span><span class="x">)</span>
-<span class="n">sdf5</span> <span class="o">=</span> <span class="n">DataFrameRow</span><span class="x">(</span><span class="n">df</span><span class="x">,</span> <span class="mi">1</span><span class="x">)</span>
-</code></pre></div></div>
 
 <h3 id="column-labels">Column Labels</h3>
 

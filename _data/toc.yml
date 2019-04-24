@@ -28,16 +28,32 @@
 
 - divider: true
 
+- header: Rectangular Data
+  not_numbered: true
+
 - title: DataFrames in Julia
   url: /01-builtins/index
-  expend_sections: true
+  # expand_sections: true
   sections:
     - title: DataFrames.jl
       url: /01-builtins/01-dataframes
-      not_numbered: true
+      # not_numbered: true
     - title: Categorical Arrays
       url: /01-builtins/02-categorical-arrays
-      not_numbered: true
+      # not_numbered: true
     - title: Importing and Exporting Data
       url: /01-builtins/03-importing-exporting
+      # not_numbered: true
+    - title: Missing Data
+      url: /01-builtins/04-missing-data
+      # not_numbered: true
+
+- divider: true
+
+- title: Exercise Solutions
+  url: /solutions/index
+  not_numbered: true
+  sections:
+    - title: 1. DataFrames in Julia
+      url: /solutions/01-dataframes-in-julia
       not_numbered: true

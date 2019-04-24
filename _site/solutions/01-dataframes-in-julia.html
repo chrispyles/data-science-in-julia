@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Welcome</title>
-  <meta name="description" content="Data Science in Julia">
+  <title>1. DataFrames in Julia</title>
+  <meta name="description" content="Exercise Solutions: DataFrames in Julia">
 
-  <link rel="canonical" href="http://0.0.0.0:4000/data-science-in-julia/">
+  <link rel="canonical" href="http://0.0.0.0:4000/data-science-in-julia/solutions/01-dataframes-in-julia.html">
   <link rel="alternate" type="application/rss+xml" title="Data Science in Julia" href="http://0.0.0.0:4000/data-science-in-julia/feed.xml">
 
-  <meta property="og:url"         content="http://0.0.0.0:4000/data-science-in-julia/" />
+  <meta property="og:url"         content="http://0.0.0.0:4000/data-science-in-julia/solutions/01-dataframes-in-julia.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Welcome" />
-<meta property="og:description" content="Data Science in Julia" />
+<meta property="og:title"       content="1. DataFrames in Julia" />
+<meta property="og:description" content="Exercise Solutions: DataFrames in Julia" />
 <meta property="og:image"       content="" />
 
 
@@ -25,15 +25,15 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "http://0.0.0.0:4000/data-science-in-julia/",
+    "http://0.0.0.0:4000/data-science-in-julia/solutions/01-dataframes-in-julia.html",
   "headline":
-    "Welcome",
+    "1. DataFrames in Julia",
   "datePublished":
     "2019-04-23T15:50:47-05:00",
   "dateModified":
     "2019-04-23T15:50:47-05:00",
   "description":
-    "Data Science in Julia",
+    "Exercise Solutions: DataFrames in Julia",
   "author": {
     "@type": "Person",
     "name": "Christopher Pyles"
@@ -418,7 +418,7 @@ initFunction(initQuery);
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry c-sidebar__entry--active"
+        <a class="c-sidebar__entry "
           href="/data-science-in-julia/index.html"
         >
           
@@ -570,13 +570,13 @@ initFunction(initQuery);
 
           
 
-          <ul class="c-sidebar__sections u-hidden-visually">
+          <ul class="c-sidebar__sections ">
             
               
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
+                <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/data-science-in-julia/solutions/01-dataframes-in-julia.html"
                 >
                   
@@ -610,8 +610,10 @@ initFunction(initQuery);
     <nav class="onthispage">
       <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
       <ul class="toc__menu">
-  <li><a href="#why-julia">Why Julia?</a></li>
-  <li><a href="#scope">Scope</a></li>
+  <li><a href="#section-1-dataframesjl">Section 1: DataFrames.jl</a></li>
+  <li><a href="#section-2-categortical-arrays">Section 2: Categortical Arrays</a></li>
+  <li><a href="#section-3-importing-and-exporting-data">Section 3: Importing and Exporting Data</a></li>
+  <li><a href="#section-4-missing-data">Section 4: Missing Data</a></li>
 </ul>
     </nav>
   </aside>
@@ -644,42 +646,238 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="data-science-in-julia">Data Science in Julia</h1>
+              <h1 id="exercise-solutions-dataframes-in-julia">Exercise Solutions: DataFrames in Julia</h1>
 
-<p><em>by Christopher Pyles</em></p>
+<p>This section contains solutions to the end-of-section exercises found in this book for the <strong>DataFrames in Julia</strong> chapter.</p>
 
-<p>Welcome! This online book is intended to give you an introduction to the forms and packages in the open source language <a href="https://julialang.org">Julia</a> that are useful in data science. This is not intended to give you an thorough introduction to the Julia language, but is intended to build on top of a good understanding of its basic structures and syntax. To learn the language, the Julia website has some <a href="https://julialang.org/learning/">great resources</a> to help you get started.</p>
+<div id="s01"></div>
 
-<h2 id="why-julia">Why Julia?</h2>
+<h3 id="section-1-dataframesjl">Section 1: DataFrames.jl</h3>
 
-<p>This book focuses on Julia because it integrates many of the great packages of Python with a model that allows for efficient computing and memory use. It borrows some syntax from the proprietary language MATLAB and incorporates that with more streamlined code and the advantageous package community of Python.</p>
+<p><strong>Exercise 1.1.1:</strong> Construct a DataFrame that encodes the following data table:</p>
 
-<h2 id="scope">Scope</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Midterm Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jen</td>
+      <td>Sophomore</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <td>Neil</td>
+      <td>Junior</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td>Lea</td>
+      <td>Junior</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>Richard</td>
+      <td>Sophomore</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td>Penelope</td>
+      <td>Sophomore</td>
+      <td>78</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>This course covers a range of topics related to the practice of data science in Julia. While it will cover the <em>implementation</em> of many statistical models and other complex algorithms, proving and providing the theory behind these models is beyond the scope of this book. This book is mainly intended as a way for individuals already experienced in the field to learn Julia. This book will cover implementation of topics including but not limited to:</p>
+<p><em>Hint</em>: Remember that you can include underscores in symbols using the <code class="highlighter-rouge">:a_b</code> notation, or you can create a symbol from a string using <code class="highlighter-rouge">Symbol("A String")</code>.</p>
 
-<ul>
-  <li>Julia’s Package <code class="highlighter-rouge">DataFrames</code></li>
-  <li><code class="highlighter-rouge">Pandas</code> in Julia</li>
-  <li>Plotting in <code class="highlighter-rouge">PyPlot</code> and <code class="highlighter-rouge">Seaborn</code>
-<!-- * Symbolic Algebra in `SymPy` --></li>
-  <li>Linear Algebra</li>
-  <li>Implementing Models</li>
-  <li>(Basic) Machine Learning with <code class="highlighter-rouge">ScikitLearn</code></li>
-</ul>
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SOLUTION:</span>
+<span class="n">df_1_1_1</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="x">(</span>
+    <span class="n">Name</span> <span class="o">=</span> <span class="x">[</span><span class="s">"Jen"</span><span class="x">,</span> <span class="s">"Neil"</span><span class="x">,</span> <span class="s">"Lea"</span><span class="x">,</span> <span class="s">"Richard"</span><span class="x">,</span> <span class="s">"Penelope"</span><span class="x">],</span>
+    <span class="n">Year</span> <span class="o">=</span> <span class="x">[</span><span class="s">"Sophomore"</span><span class="x">,</span> <span class="s">"Junior"</span><span class="x">,</span> <span class="s">"Junior"</span><span class="x">,</span> <span class="s">"Sophomore"</span><span class="x">,</span> <span class="s">"Sophomore"</span><span class="x">],</span>
+    <span class="n">Midterm_Grade</span> <span class="o">=</span> <span class="x">[</span><span class="mi">93</span><span class="x">,</span> <span class="mi">88</span><span class="x">,</span> <span class="mi">86</span><span class="x">,</span> <span class="mi">75</span><span class="x">,</span> <span class="mi">78</span><span class="x">]</span>
+<span class="x">)</span>
+</code></pre></div></div>
+
+<div class="output output_html">
+<table class="data-frame"><thead><tr><th></th><th>Name</th><th>Year</th><th>Midterm_Grade</th></tr><tr><th></th><th>String</th><th>String</th><th>Int64</th></tr></thead><tbody><p>5 rows × 3 columns</p><tr><th>1</th><td>Jen</td><td>Sophomore</td><td>93</td></tr><tr><th>2</th><td>Neil</td><td>Junior</td><td>88</td></tr><tr><th>3</th><td>Lea</td><td>Junior</td><td>86</td></tr><tr><th>4</th><td>Richard</td><td>Sophomore</td><td>75</td></tr><tr><th>5</th><td>Penelope</td><td>Sophomore</td><td>78</td></tr></tbody></table>
+</div>
+
+<p><strong>Exercise 1.1.2:</strong> Create a <code class="highlighter-rouge">DataFrameRow</code> object that contains Lea’s midterm information.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SOLUTION:</span>
+<span class="n">df_1_1_1</span><span class="x">[</span><span class="mi">3</span><span class="x">,:]</span>
+</code></pre></div></div>
+
+<div class="output output_html">
+<p>DataFrameRow</p><table class="data-frame"><thead><tr><th></th><th>Name</th><th>Year</th><th>Midterm_Grade</th></tr><tr><th></th><th>String</th><th>String</th><th>Int64</th></tr></thead><tbody><p>1 rows × 3 columns</p><tr><th>3</th><td>Lea</td><td>Junior</td><td>86</td></tr></tbody></table>
+</div>
+
+<p><strong>Exercise 1.1.3:</strong> Using the function <code class="highlighter-rouge">Statistics.mean</code>, compute the mean of the midterm scores. Do not hardcode the answer, but use a function which accepts an array.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SOLUTION:</span>
+<span class="c"># # if you need to, import statistics</span>
+<span class="c"># using Statistics</span>
+
+<span class="n">mean</span><span class="x">(</span><span class="n">df_1_1_1</span><span class="x">[:</span><span class="n">Midterm_Grade</span><span class="x">])</span>
+</code></pre></div></div>
+
+<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>84.0
+</code></pre></div></div>
+
+<div id="s02"></div>
+
+<h3 id="section-2-categortical-arrays">Section 2: Categortical Arrays</h3>
+
+<p><strong>Exercise 1.2.1:</strong> Create a categorical array <code class="highlighter-rouge">arr</code> for the midterm grades data set from the last set of exericses.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Midterm Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jen</td>
+      <td>Sophomore</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <td>Neil</td>
+      <td>Junior</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td>Lea</td>
+      <td>Junior</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>Richard</td>
+      <td>Sophomore</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td>Penelope</td>
+      <td>Sophomore</td>
+      <td>78</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SOLUTION:</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">CategoricalArray</span><span class="x">(</span><span class="n">df_1_1_1</span><span class="x">[:</span><span class="n">Year</span><span class="x">])</span>
+</code></pre></div></div>
+
+<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5-element CategoricalArray{String,1,UInt32}:
+ "Sophomore"
+ "Junior"   
+ "Junior"   
+ "Sophomore"
+ "Sophomore"
+</code></pre></div></div>
+
+<p><strong>Exercise 1.2.2:</strong> Add two <code class="highlighter-rouge">Freshman</code> individuals and three <code class="highlighter-rouge">Senior</code> individuals to the array (in that order). Recall that you can append arrays using the <code class="highlighter-rouge">append!</code> function.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SOLUTION:</span>
+<span class="n">append!</span><span class="x">(</span><span class="n">arr</span><span class="x">,</span> <span class="n">CategoricalArray</span><span class="x">([</span><span class="s">"Freshman"</span><span class="x">,</span> <span class="s">"Freshman"</span><span class="x">,</span> <span class="s">"Senior"</span><span class="x">,</span> <span class="s">"Senior"</span><span class="x">,</span> <span class="s">"Senior"</span><span class="x">]))</span>
+</code></pre></div></div>
+
+<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10-element CategoricalArray{String,1,UInt32}:
+ "Sophomore"
+ "Junior"   
+ "Junior"   
+ "Sophomore"
+ "Sophomore"
+ "Freshman" 
+ "Freshman" 
+ "Senior"   
+ "Senior"   
+ "Senior"   
+</code></pre></div></div>
+
+<p><strong>Exercise 1.2.3:</strong> Order the levels of the array so that <code class="highlighter-rouge">Freshman</code> is less than <code class="highlighter-rouge">Sophomore</code> is less than <code class="highlighter-rouge">Junior</code> etc.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SOLUTION:</span>
+<span class="n">levels!</span><span class="x">(</span><span class="n">arr</span><span class="x">,</span> <span class="x">[</span><span class="s">"Freshman"</span><span class="x">,</span> <span class="s">"Sophomore"</span><span class="x">,</span> <span class="s">"Junior"</span><span class="x">,</span> <span class="s">"Senior"</span><span class="x">])</span>
+<span class="n">levels</span><span class="x">(</span><span class="n">arr</span><span class="x">)</span>
+</code></pre></div></div>
+
+<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4-element Array{String,1}:
+ "Freshman" 
+ "Sophomore"
+ "Junior"   
+ "Senior"   
+</code></pre></div></div>
+
+<p><strong>Exercise 1.2.4:</strong> Test your ordering using <code class="highlighter-rouge">arr[3] &gt; arr[1] == arr[4] &gt; arr[6]</code>. (This should return <code class="highlighter-rouge">true</code>.)</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SOLUTION:</span>
+<span class="n">ordered!</span><span class="x">(</span><span class="n">arr</span><span class="x">,</span> <span class="n">true</span><span class="x">)</span>
+<span class="n">arr</span><span class="x">[</span><span class="mi">3</span><span class="x">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="x">[</span><span class="mi">1</span><span class="x">]</span> <span class="o">==</span> <span class="n">arr</span><span class="x">[</span><span class="mi">4</span><span class="x">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="x">[</span><span class="mi">6</span><span class="x">]</span>
+</code></pre></div></div>
+
+<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>true
+</code></pre></div></div>
+
+<div id="s03"></div>
+
+<h3 id="section-3-importing-and-exporting-data">Section 3: Importing and Exporting Data</h3>
+
+<p><strong>Exercise 1.3.1:</strong> Write code to open the follow text file as a DataFrame. The assume the filename is <code class="highlighter-rouge">data.txt</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Col_1|Col_2|Col_3
+1|2|3
+4|5|6
+</code></pre></div></div>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SOLUTION:</span>
+<span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="x">(</span><span class="s">"data.txt"</span><span class="x">,</span> <span class="n">delim</span><span class="o">=</span><span class="s">"|"</span><span class="x">)</span>
+</code></pre></div></div>
+
+<p><strong>Exercise 1.3.2:</strong> How would you adapt the <code class="highlighter-rouge">load_json</code> function if the data in your JSON file as oriented as a dictionary of columns to arrays of values, e.g.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ 
+    "Col_1" : [1, 4],
+    "Col_2" : [2, 5],
+    "Col_3" : [3, 6]
+}
+</code></pre></div></div>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SOLUTION:</span>
+<span class="k">function</span><span class="nf"> load_json</span><span class="x">(</span><span class="n">path</span><span class="x">)</span>
+    <span class="n">dictarr</span> <span class="o">=</span> <span class="n">JSON</span><span class="o">.</span><span class="n">parsefile</span><span class="x">(</span><span class="n">path</span><span class="x">)</span>
+    <span class="n">df_dict</span> <span class="o">=</span> <span class="n">Dict</span><span class="x">()</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="k">in</span> <span class="n">keys</span><span class="x">(</span><span class="n">dictarr</span><span class="x">)</span>
+        <span class="n">df_dict</span><span class="x">[</span><span class="n">col</span><span class="x">]</span> <span class="o">=</span> <span class="n">dictarr</span><span class="x">[</span><span class="n">col</span><span class="x">]</span>
+    <span class="k">end</span>
+    <span class="k">return</span> <span class="n">DataFrame</span><span class="x">(</span><span class="n">df_dict</span><span class="x">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div id="s04"></div>
+
+<h3 id="section-4-missing-data">Section 4: Missing Data</h3>
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="">
-      〈 <span class="u-margin-right-tiny"></span> 
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/data-science-in-julia/solutions/index">
+      〈 <span class="u-margin-right-tiny"></span> Exercise Solutions
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/data-science-in-julia/01-builtins/index">
-      DataFrames in Julia <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="">
+       <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

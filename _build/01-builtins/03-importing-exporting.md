@@ -6,8 +6,8 @@ prev_page:
   url: /01-builtins/02-categorical-arrays
   title: 'Categorical Arrays'
 next_page:
-  url: 
-  title: ''
+  url: /01-builtins/04-missing-data
+  title: 'Missing Data'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
@@ -297,3 +297,23 @@ write_json (generic function with 1 method)
 
 
 The file includes the functions `load_json` and `write_json`, as well as the helper function `to_array`. Read their docstrings for more information on each function.
+
+## Exercises
+
+**Exercise 1.3.1:** Write code to open the following text file as a DataFrame. The assume the filename is `data.txt`.
+
+```
+Col_1|Col_2|Col_3
+1|2|3
+4|5|6
+```
+
+**Exercise 1.3.2:** How would you adapt the `load_json` function if the data in your JSON file as oriented as a dictionary of columns to arrays of values, e.g.
+
+```
+{ 
+    "Col_1" : [1, 4],
+    "Col_2" : [2, 5],
+    "Col_3" : [3, 6]
+}
+```

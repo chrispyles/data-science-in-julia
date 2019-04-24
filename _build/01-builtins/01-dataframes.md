@@ -125,7 +125,7 @@ df[1:2, 1]
 
 
 
-As you can see, selecting multiple rows and columns in the slice returns a new DataFrame with the indices reset and selecting a single column returns an array of the values for that column in the selected rows. If you do not pass a tuple to the bracket (e.g. `df[2]`), it returns the column at that index. Finally, subsetting a DataFrame to select a single row returns a `DataFrameRow` object, which is acts similar to a 1-row DataFrame. The details of this type can be find by calling `?DataFrameRow` in Jupyter:
+As you can see, selecting multiple rows and columns in the slice returns a new DataFrame with the indices reset and selecting a single column returns an array of the values for that column in the selected rows. If you do not pass a tuple to the bracket (e.g. `df[2]`), it returns the column at that index. Finally, subsetting a DataFrame to select a single row returns a `DataFrameRow` object, which is acts similar to a 1-row DataFrame. The details of this type can be find by calling `?DataFrameRow` in Jupyter.
 
 
 
@@ -142,62 +142,6 @@ df[3,1:2]
 <div markdown="0" class="output output_html">
 <p>DataFrameRow</p><table class="data-frame"><thead><tr><th></th><th>Sex</th><th>Age</th></tr><tr><th></th><th>String</th><th>Int32</th></tr></thead><tbody><p>1 rows × 2 columns</p><tr><th>3</th><td>M</td><td>20</td></tr></tbody></table>
 </div>
-
-
-
-
-
-{:.input_area}
-```julia
-?DataFrameRow
-```
-
-
-{:.output .output_stream}
-```
-search: [0m[1mD[22m[0m[1ma[22m[0m[1mt[22m[0m[1ma[22m[0m[1mF[22m[0m[1mr[22m[0m[1ma[22m[0m[1mm[22m[0m[1me[22m[0m[1mR[22m[0m[1mo[22m[0m[1mw[22m [0m[1mD[22m[0m[1ma[22m[0m[1mt[22m[0m[1ma[22m[0m[1mF[22m[0m[1mr[22m[0m[1ma[22m[0m[1mm[22m[0m[1me[22m [0m[1mD[22m[0m[1ma[22m[0m[1mt[22m[0m[1ma[22m[0m[1mF[22m[0m[1mr[22m[0m[1ma[22m[0m[1mm[22m[0m[1me[22ms Sub[0m[1mD[22m[0m[1ma[22m[0m[1mt[22m[0m[1ma[22m[0m[1mF[22m[0m[1mr[22m[0m[1ma[22m[0m[1mm[22m[0m[1me[22m Groupe[0m[1md[22mD[0m[1ma[22m[0m[1mt[22m[0m[1ma[22m[0m[1mF[22m[0m[1mr[22m[0m[1ma[22m[0m[1mm[22m[0m[1me[22m
-
-
-```
-
-
-
-
-```
-DataFrameRow{<:AbstractDataFrame,<:AbstractIndex}
-```
-
-A view of one row of an `AbstractDataFrame`.
-
-A `DataFrameRow` is returned by `getindex` or `view` functions when one row and a selection of columns are requested, or when iterating the result of the call to the [`eachrow`](@ref) function.
-
-The `DataFrameRow` constructor can also be called directly:
-
-```
-DataFrameRow(parent::AbstractDataFrame, row::Integer, cols=:)
-```
-
-A `DataFrameRow` supports the iteration interface and can therefore be passed to functions that expect a collection as an argument.
-
-Indexing is one-dimensional like specifying a column of a `DataFrame`. You can also access the data in a `DataFrameRow` using the `getproperty` and `setproperty!` functions and convert it to a `NamedTuple` using the `copy` function.
-
-It is possible to create a `DataFrameRow` with duplicate columns. All such columns will have a reference to the same entry in the parent `DataFrame`.
-
-If the selection of columns in a parent data frame is passed as `:` (a colon) then `DataFrameRow` will always have all columns from the parent, even if they are added or removed after its creation.
-
-### Examples
-
-```julia
-df = DataFrame(a = repeat([1, 2, 3, 4], outer=[2]),
-               b = repeat([2, 1], outer=[4]),
-               c = randn(8))
-sdf1 = view(df, 2, :)
-sdf2 = @view df[end, [:a]]
-sdf3 = eachrow(df)[1]
-sdf4 = DataFrameRow(df, 2, 1:2)
-sdf5 = DataFrameRow(df, 1)
-```
-
 
 
 

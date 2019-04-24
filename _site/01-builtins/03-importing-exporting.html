@@ -29,9 +29,9 @@
   "headline":
     "Importing and Exporting Data",
   "datePublished":
-    "2019-04-20T00:08:44-05:00",
+    "2019-04-23T15:50:47-05:00",
   "dateModified":
-    "2019-04-20T00:08:44-05:00",
+    "2019-04-23T15:50:47-05:00",
   "description":
     "Import and Exporting Data",
   "author": {
@@ -436,6 +436,10 @@ initFunction(initQuery);
         
       
       
+        <li><h2 class="c-sidebar__title">Rectangular Data</li>
+        
+      
+      
 
       
       
@@ -514,6 +518,77 @@ initFunction(initQuery);
               </li>
               
             
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data-science-in-julia/01-builtins/04-missing-data.html"
+                >
+                  
+                  Missing Data
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/data-science-in-julia/solutions/index.html"
+        >
+          
+          Exercise Solutions
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data-science-in-julia/solutions/01-dataframes-in-julia.html"
+                >
+                  
+                  1. DataFrames in Julia
+                </a>
+
+                
+                
+
+              </li>
+              
+            
           </ul>
         
       </li>
@@ -548,6 +623,7 @@ initFunction(initQuery);
       <li><a href="#reproducing-the-pipeline">Reproducing the Pipeline</a></li>
     </ul>
   </li>
+  <li><a href="#exercises">Exercises</a></li>
 </ul>
     </nav>
   </aside>
@@ -800,6 +876,24 @@ initFunction(initQuery);
 
 <p>The file includes the functions <code class="highlighter-rouge">load_json</code> and <code class="highlighter-rouge">write_json</code>, as well as the helper function <code class="highlighter-rouge">to_array</code>. Read their docstrings for more information on each function.</p>
 
+<h2 id="exercises">Exercises</h2>
+
+<p><strong>Exercise 1.3.1:</strong> Write code to open the following text file as a DataFrame. The assume the filename is <code class="highlighter-rouge">data.txt</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Col_1|Col_2|Col_3
+1|2|3
+4|5|6
+</code></pre></div></div>
+
+<p><strong>Exercise 1.3.2:</strong> How would you adapt the <code class="highlighter-rouge">load_json</code> function if the data in your JSON file as oriented as a dictionary of columns to arrays of values, e.g.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ 
+    "Col_1" : [1, 4],
+    "Col_2" : [2, 5],
+    "Col_3" : [3, 6]
+}
+</code></pre></div></div>
+
               <nav class="c-page__nav">
   
     
@@ -810,8 +904,8 @@ initFunction(initQuery);
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="">
-       <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/data-science-in-julia/01-builtins/04-missing-data">
+      Missing Data <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
