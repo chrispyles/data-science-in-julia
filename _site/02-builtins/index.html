@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Exercise Solutions</title>
-  <meta name="description" content="Exercise Solutions">
+  <title>DataFrames in Julia</title>
+  <meta name="description" content="DataFrames in Julia">
 
-  <link rel="canonical" href="http://0.0.0.0:4000/data-science-in-julia/solutions/">
+  <link rel="canonical" href="http://0.0.0.0:4000/data-science-in-julia/02-builtins/">
   <link rel="alternate" type="application/rss+xml" title="Data Science in Julia" href="http://0.0.0.0:4000/data-science-in-julia/feed.xml">
 
-  <meta property="og:url"         content="http://0.0.0.0:4000/data-science-in-julia/solutions/" />
+  <meta property="og:url"         content="http://0.0.0.0:4000/data-science-in-julia/02-builtins/" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Exercise Solutions" />
-<meta property="og:description" content="Exercise Solutions" />
+<meta property="og:title"       content="DataFrames in Julia" />
+<meta property="og:description" content="DataFrames in Julia" />
 <meta property="og:image"       content="" />
 
 
@@ -25,15 +25,15 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "http://0.0.0.0:4000/data-science-in-julia/solutions/",
+    "http://0.0.0.0:4000/data-science-in-julia/02-builtins/",
   "headline":
-    "Exercise Solutions",
+    "DataFrames in Julia",
   "datePublished":
     "2019-04-30T16:38:39-05:00",
   "dateModified":
     "2019-04-30T16:38:39-05:00",
   "description":
-    "Exercise Solutions",
+    "DataFrames in Julia",
   "author": {
     "@type": "Person",
     "name": "Christopher Pyles"
@@ -528,7 +528,7 @@ initFunction(initQuery);
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+        <a class="c-sidebar__entry c-sidebar__entry--active"
           href="/data-science-in-julia/02-builtins/index.html"
         >
           
@@ -546,7 +546,7 @@ initFunction(initQuery);
 
           
 
-          <ul class="c-sidebar__sections u-hidden-visually">
+          <ul class="c-sidebar__sections ">
             
               
               
@@ -643,7 +643,7 @@ initFunction(initQuery);
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry c-sidebar__entry--active"
+        <a class="c-sidebar__entry "
           href="/data-science-in-julia/solutions/index.html"
         >
           
@@ -659,7 +659,7 @@ initFunction(initQuery);
 
           
 
-          <ul class="c-sidebar__sections ">
+          <ul class="c-sidebar__sections u-hidden-visually">
             
               
               
@@ -723,22 +723,31 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="exercise-solutions">Exercise Solutions</h1>
+              <h1 id="dataframes-in-julia">DataFrames in Julia</h1>
 
-<p>This section contains solutions to the exercises at the end of each section of this book.</p>
+<p>This chapter focuses on representations of rectangular data and other data abstractions that are unique to Julia. While Julia is known for its implementation of Python packages, this chapter will focus on utilizing the types and packages that Julia makes itself in order to load, view, manipulate, and export data sets. The purpose of this chapter is to develop an understanding of Julia’s own data-specific functionality so that we can understand the tools that underly the packages we will be calling on later.</p>
+
+<p>This chapter covers the following packages:</p>
+
+<ul>
+  <li>DataFrames.jl</li>
+  <li>CategoricalArrays.jl</li>
+  <li>CSV.jl</li>
+  <li>JSON.jl</li>
+</ul>
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/data-science-in-julia/02-builtins/04-missing-data">
-      〈 <span class="u-margin-right-tiny"></span> Missing Data
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/data-science-in-julia/01-learn-julia/02-arrays">
+      〈 <span class="u-margin-right-tiny"></span> Arrays
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/data-science-in-julia/solutions/02-dataframes-in-julia">
-      1. DataFrames in Julia <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/data-science-in-julia/02-builtins/01-dataframes">
+      DataFrames.jl <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

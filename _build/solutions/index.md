@@ -3,10 +3,10 @@ interact_link: content/solutions/index.ipynb
 kernel_name: julia-1.1
 title: 'Exercise Solutions'
 prev_page:
-  url: /01-builtins/04-missing-data
+  url: /02-builtins/04-missing-data
   title: 'Missing Data'
 next_page:
-  url: /solutions/01-dataframes-in-julia
+  url: /solutions/02-dataframes-in-julia
   title: '1. DataFrames in Julia'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---

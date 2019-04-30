@@ -20,8 +20,8 @@ title: Data Science in Julia
 author: Christopher Pyles
 email: cpyles@berkeley.edu
 description: 
-baseurl: /data-science-in-julia               # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
-url: https://cpyles.com              # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""               # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+url: https://dsjl.cpyles.com              # the base hostname & protocol for your site, e.g. http://example.com
 
 
 #######################################################################################

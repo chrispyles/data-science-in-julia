@@ -28,32 +28,46 @@
 
 - divider: true
 
+- header: Learn Julia
+
+- title: The Basic Data Types
+  url: 01-learn-julia/index
+  sections:
+    - title: Numbers
+      url: 01-learn-julia/01-basics
+    - title: Arrays
+      url: 01-learn-julia/02-arrays
+
+- divider: true
+
 - header: Rectangular Data
   not_numbered: true
 
 - title: DataFrames in Julia
-  url: /01-builtins/index
+  url: 02-builtins/index
   # expand_sections: true
   sections:
     - title: DataFrames.jl
-      url: /01-builtins/01-dataframes
+      url: 02-builtins/01-dataframes
       # not_numbered: true
     - title: Categorical Arrays
-      url: /01-builtins/02-categorical-arrays
+      url: 02-builtins/02-categorical-arrays
       # not_numbered: true
     - title: Importing and Exporting Data
-      url: /01-builtins/03-importing-exporting
+      url: 02-builtins/03-importing-exporting
       # not_numbered: true
     - title: Missing Data
-      url: /01-builtins/04-missing-data
+      url: 02-builtins/04-missing-data
       # not_numbered: true
 
 - divider: true
 
 - title: Exercise Solutions
-  url: /solutions/index
+  url: solutions/index
   not_numbered: true
   sections:
-    - title: 1. DataFrames in Julia
-      url: /solutions/01-dataframes-in-julia
+    - title: 1. The Basic Data Types
+      url: solutions/01-learn-julia
+    - title: 2. DataFrames in Julia
+      url: solutions/02-dataframes-in-julia
       not_numbered: true
