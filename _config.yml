@@ -138,6 +138,7 @@ exclude:
 - vendor/gems/
 - vendor/ruby/
 - LICENSE
+- CNAME
 
 plugins:
 - jekyll-redirect-from
