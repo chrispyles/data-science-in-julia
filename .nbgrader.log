@@ -183,3 +183,1676 @@
 [LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
 [LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
 [LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Creating new notebook in /content/solutions
+[LabApp | INFO] Kernel started: 90cde5c5-c162-4e23-83bf-7f1c79efcc04
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 90cde5c5-c162-4e23-83bf-7f1c79efcc04
+[LabApp | INFO] Creating new notebook in /content/solutions
+[LabApp | INFO] Kernel started: 2f372cd2-4545-4d3f-a417-1fa2711d3e72
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 2f372cd2-4545-4d3f-a417-1fa2711d3e72
+[LabApp | INFO] Kernel shutdown: 90cde5c5-c162-4e23-83bf-7f1c79efcc04
+[LabApp | WARNING] delete /content/solutions/Untitled.ipynb
+[LabApp | INFO] Saving file at /content/solutions/01-learn-julia.ipynb
+[LabApp | INFO] Starting buffering for 2f372cd2-4545-4d3f-a417-1fa2711d3e72:0f97509712a947a19df69528a32f51b1
+[LabApp | INFO] Kernel shutdown: 2f372cd2-4545-4d3f-a417-1fa2711d3e72
+[LabApp | WARNING] delete /content/solutions/01-learn-julia.ipynb
+[LabApp | WARNING] delete /content/solutions/01-learn-julia.ipynb
+[LabApp | WARNING] 404 DELETE /api/contents/content/solutions/01-learn-julia.ipynb?1556083904469 (::1): File or directory does not exist: /Users/chrispyles/GitHub/data-science-in-julia/content/solutions/01-learn-julia.ipynb
+[LabApp | WARNING] File or directory does not exist: /Users/chrispyles/GitHub/data-science-in-julia/content/solutions/01-learn-julia.ipynb
+[LabApp | WARNING] 404 DELETE /api/contents/content/solutions/01-learn-julia.ipynb?1556083904469 (::1) 1.76ms referer=http://localhost:8889/lab
+[LabApp | INFO] Kernel started: eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | INFO] Copying content/solutions/02-dataframes-in-julia.ipynb to /content/solutions
+[LabApp | INFO] Kernel started: 42a9bc9a-a5bc-4ed2-9492-7099f17bbdb8
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 42a9bc9a-a5bc-4ed2-9492-7099f17bbdb8
+[LabApp | INFO] Saving file at /content/solutions/01-learn-julia.ipynb
+[LabApp | WARNING] Notebook content/solutions/01-learn-julia.ipynb is not trusted
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 42a9bc9a-a5bc-4ed2-9492-7099f17bbdb8
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Saving file at /content/solutions/01-learn-julia.ipynb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Saving file at /content/solutions/01-learn-julia.ipynb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Saving file at /content/01-learn-julia/01-basics.ipynb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Creating new directory in /content/01-learn-julia
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | WARNING] delete /content/01-learn-julia/Untitled Folder
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 563, in connect_stdin
+        return self._create_connected_socket('stdin', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Creating new notebook in /content/01-learn-julia
+[LabApp | INFO] Kernel started: ec187379-0c24-4c68-968d-b6fc1bb51b13
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 559, in connect_shell
+        return self._create_connected_socket('shell', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 559, in connect_shell
+        return self._create_connected_socket('shell', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | ERROR] Uncaught exception GET /api/kernelspecs?1556084094799 (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8889', method='GET', uri='/api/kernelspecs?1556084094799', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1541, in _execute
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 2949, in wrapper
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernelspecs/handlers.py", line 57, in get
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/kernelspec.py", line 253, in get_all_specs
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/kernelspec.py", line 166, in find_kernel_specs
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/kernelspec.py", line 94, in _list_kernels_in
+    OSError: [Errno 24] Too many open files: '/Users/chrispyles/Library/Jupyter/kernels'
+[LabApp | WARNING] Unhandled error
+[LabApp | ERROR] {
+      "Host": "localhost:8889",
+      "Connection": "keep-alive",
+      "X-Xsrftoken": "2|50e2188b|79711b2d3b31398924b1eb314a797084|1554513908",
+      "Save-Data": "on",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.91 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8889/lab",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,es;q=0.8",
+      "Cookie": "_xsrf=2|50e2188b|79711b2d3b31398924b1eb314a797084|1554513908; username-localhost-8888=\"2|1:0|10:1554521545|23:username-localhost-8888|44:M2M3ZWFjYjRhZWY4NGY1NGI5MGMyYjNiNmUwYmYxNmI=|78b8de1ee9e8f94e382c5d0440380a32896af4bc18134586f6236891c1d18bfa\"; username-localhost-8889=\"2|1:0|10:1555047354|23:username-localhost-8889|44:NTlmMzUzZTc5NTUxNGM3ZGEwZmVmZDcyYTdiMGJkNGY=|c07c723563e55bf0bc829e93a8d6ae1caa650c54ec402b9f0882663e55a984b0\"; username-localhost-8890=\"2|1:0|10:1555692944|23:username-localhost-8890|44:MTQ3Y2Q1NTJhMjI4NDA1ZGFmNjQxMTlhNDk2ZjcxNDc=|fee0a5d4a21ce8c927c097f24b9d6e015514e6c8562b17877ef7a20e7eecf9fa\""
+    }
+[LabApp | ERROR] 500 GET /api/kernelspecs?1556084094799 (::1) 2.55ms referer=http://localhost:8889/lab
+[LabApp | ERROR] Uncaught exception GET /api/contents/content/01-learn-julia?content=1&1556084096876 (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8889', method='GET', uri='/api/contents/content/01-learn-julia?content=1&1556084096876', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1543, in _execute
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/gen.py", line 1099, in run
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/gen.py", line 315, in wrapper
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/contents/handlers.py", line 112, in get
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 431, in get
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 313, in _dir_model
+    OSError: [Errno 24] Too many open files: '/Users/chrispyles/GitHub/data-science-in-julia/content/01-learn-julia'
+[LabApp | WARNING] Unhandled error
+[LabApp | ERROR] {
+      "Host": "localhost:8889",
+      "Connection": "keep-alive",
+      "X-Xsrftoken": "2|50e2188b|79711b2d3b31398924b1eb314a797084|1554513908",
+      "Save-Data": "on",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.91 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8889/lab",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,es;q=0.8",
+      "Cookie": "_xsrf=2|50e2188b|79711b2d3b31398924b1eb314a797084|1554513908; username-localhost-8888=\"2|1:0|10:1554521545|23:username-localhost-8888|44:M2M3ZWFjYjRhZWY4NGY1NGI5MGMyYjNiNmUwYmYxNmI=|78b8de1ee9e8f94e382c5d0440380a32896af4bc18134586f6236891c1d18bfa\"; username-localhost-8889=\"2|1:0|10:1555047354|23:username-localhost-8889|44:NTlmMzUzZTc5NTUxNGM3ZGEwZmVmZDcyYTdiMGJkNGY=|c07c723563e55bf0bc829e93a8d6ae1caa650c54ec402b9f0882663e55a984b0\"; username-localhost-8890=\"2|1:0|10:1555692944|23:username-localhost-8890|44:MTQ3Y2Q1NTJhMjI4NDA1ZGFmNjQxMTlhNDk2ZjcxNDc=|fee0a5d4a21ce8c927c097f24b9d6e015514e6c8562b17877ef7a20e7eecf9fa\""
+    }
+[LabApp | ERROR] 500 GET /api/contents/content/01-learn-julia?content=1&1556084096876 (::1) 3.30ms referer=http://localhost:8889/lab
+[LabApp | ERROR] Uncaught exception PUT /lab/api/workspaces/lab?1556084097625 (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8889', method='PUT', uri='/lab/api/workspaces/lab?1556084097625', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1541, in _execute
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/base/handlers.py", line 677, in wrapper
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 2949, in wrapper
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyterlab_server/workspaces_handler.py", line 179, in put
+    OSError: [Errno 24] Too many open files: '/Users/chrispyles/.jupyter/lab/workspaces/lab-a511.jupyterlab-workspace'
+[LabApp | WARNING] Unhandled error
+[LabApp | ERROR] {
+      "Host": "localhost:8889",
+      "Connection": "keep-alive",
+      "Content-Length": "832",
+      "Origin": "http://localhost:8889",
+      "X-Xsrftoken": "2|50e2188b|79711b2d3b31398924b1eb314a797084|1554513908",
+      "Save-Data": "on",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.91 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8889/lab",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,es;q=0.8",
+      "Cookie": "_xsrf=2|50e2188b|79711b2d3b31398924b1eb314a797084|1554513908; username-localhost-8888=\"2|1:0|10:1554521545|23:username-localhost-8888|44:M2M3ZWFjYjRhZWY4NGY1NGI5MGMyYjNiNmUwYmYxNmI=|78b8de1ee9e8f94e382c5d0440380a32896af4bc18134586f6236891c1d18bfa\"; username-localhost-8889=\"2|1:0|10:1555047354|23:username-localhost-8889|44:NTlmMzUzZTc5NTUxNGM3ZGEwZmVmZDcyYTdiMGJkNGY=|c07c723563e55bf0bc829e93a8d6ae1caa650c54ec402b9f0882663e55a984b0\"; username-localhost-8890=\"2|1:0|10:1555692944|23:username-localhost-8890|44:MTQ3Y2Q1NTJhMjI4NDA1ZGFmNjQxMTlhNDk2ZjcxNDc=|fee0a5d4a21ce8c927c097f24b9d6e015514e6c8562b17877ef7a20e7eecf9fa\""
+    }
+[LabApp | ERROR] 500 PUT /lab/api/workspaces/lab?1556084097625 (::1) 2.13ms referer=http://localhost:8889/lab
+[LabApp | WARNING] Timeout waiting for kernel_info reply from ec187379-0c24-4c68-968d-b6fc1bb51b13
+[LabApp | ERROR] Uncaught exception in /api/kernels/ec187379-0c24-4c68-968d-b6fc1bb51b13/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 559, in connect_shell
+        return self._create_connected_socket('shell', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | INFO] Starting buffering for ec187379-0c24-4c68-968d-b6fc1bb51b13:666ded90-c81f-4d49-9e6f-9c5c6fdd6405
+[LabApp | INFO] Adapting to protocol v5.0 for kernel eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | ERROR] Uncaught exception in /api/kernels/eb0f401e-c649-4565-b09e-964f73db16b8/channels
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/websocket.py", line 498, in _run_callback
+        result = callback(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 275, in open
+        self.create_stream()
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 129, in create_stream
+        self.channels[channel] = stream = meth(self.kernel_id, identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/multikernelmanager.py", line 33, in wrapped
+        r = method(*args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/ioloop/manager.py", line 22, in wrapped
+        socket = f(self, *args, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 559, in connect_shell
+        return self._create_connected_socket('shell', identity=identity)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter_client/connect.py", line 543, in _create_connected_socket
+        sock = self.context.socket(socket_type)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/context.py", line 146, in socket
+        s = self._socket_class(self, socket_type, **kwargs)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/zmq/sugar/socket.py", line 58, in __init__
+        super(Socket, self).__init__(*a, **kw)
+      File "zmq/backend/cython/socket.pyx", line 330, in zmq.backend.cython.socket.Socket.__init__
+    zmq.error.ZMQError: Too many open files
+[LabApp | ERROR] Uncaught exception PATCH /api/contents/content/01-learn-julia/Untitled.ipynb?1556084103380 (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8889', method='PATCH', uri='/api/contents/content/01-learn-julia/Untitled.ipynb?1556084103380', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1543, in _execute
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/gen.py", line 1099, in run
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/gen.py", line 315, in wrapper
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/contents/handlers.py", line 125, in patch
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 296, in update
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 284, in rename
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 560, in rename_file
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/genericpath.py", line 96, in samefile
+    FileNotFoundError: [Errno 2] No such file or directory: '/Users/chrispyles/GitHub/data-science-in-julia/content/01-learn-julia/Untitled.ipynb'
+[LabApp | WARNING] Unhandled error
+[LabApp | ERROR] {
+      "Host": "localhost:8889",
+      "Connection": "keep-alive",
+      "Content-Length": "49",
+      "Origin": "http://localhost:8889",
+      "X-Xsrftoken": "2|50e2188b|79711b2d3b31398924b1eb314a797084|1554513908",
+      "Save-Data": "on",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.91 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8889/lab",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,es;q=0.8",
+      "Cookie": "_xsrf=2|50e2188b|79711b2d3b31398924b1eb314a797084|1554513908; username-localhost-8888=\"2|1:0|10:1554521545|23:username-localhost-8888|44:M2M3ZWFjYjRhZWY4NGY1NGI5MGMyYjNiNmUwYmYxNmI=|78b8de1ee9e8f94e382c5d0440380a32896af4bc18134586f6236891c1d18bfa\"; username-localhost-8889=\"2|1:0|10:1555047354|23:username-localhost-8889|44:NTlmMzUzZTc5NTUxNGM3ZGEwZmVmZDcyYTdiMGJkNGY=|c07c723563e55bf0bc829e93a8d6ae1caa650c54ec402b9f0882663e55a984b0\"; username-localhost-8890=\"2|1:0|10:1555692944|23:username-localhost-8890|44:MTQ3Y2Q1NTJhMjI4NDA1ZGFmNjQxMTlhNDk2ZjcxNDc=|fee0a5d4a21ce8c927c097f24b9d6e015514e6c8562b17877ef7a20e7eecf9fa\""
+    }
+[LabApp | ERROR] 500 PATCH /api/contents/content/01-learn-julia/Untitled.ipynb?1556084103380 (::1) 6.51ms referer=http://localhost:8889/lab
+[LabApp | INFO] Saving file at /content/01-learn-julia/02-arrays.ipynb
+[LabApp | ERROR] Error while saving file: content/01-learn-julia/02-arrays.ipynb unable to open database file
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 470, in save
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 487, in check_and_sign
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/nbformat/sign.py", line 449, in sign
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/nbformat/sign.py", line 211, in store_signature
+    sqlite3.OperationalError: unable to open database file
+[LabApp | WARNING] 500 PUT /api/contents/content/01-learn-julia/02-arrays.ipynb?1556084108769 (::1): Unexpected error while saving file: content/01-learn-julia/02-arrays.ipynb unable to open database file
+[LabApp | WARNING] Unexpected error while saving file: content/01-learn-julia/02-arrays.ipynb unable to open database file
+[LabApp | ERROR] {
+      "Host": "localhost:8889",
+      "Connection": "keep-alive",
+      "Content-Length": "343",
+      "Origin": "http://localhost:8889",
+      "X-Xsrftoken": "2|50e2188b|79711b2d3b31398924b1eb314a797084|1554513908",
+      "Save-Data": "on",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.91 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8889/lab",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,es;q=0.8",
+      "Cookie": "_xsrf=2|50e2188b|79711b2d3b31398924b1eb314a797084|1554513908; username-localhost-8888=\"2|1:0|10:1554521545|23:username-localhost-8888|44:M2M3ZWFjYjRhZWY4NGY1NGI5MGMyYjNiNmUwYmYxNmI=|78b8de1ee9e8f94e382c5d0440380a32896af4bc18134586f6236891c1d18bfa\"; username-localhost-8889=\"2|1:0|10:1555047354|23:username-localhost-8889|44:NTlmMzUzZTc5NTUxNGM3ZGEwZmVmZDcyYTdiMGJkNGY=|c07c723563e55bf0bc829e93a8d6ae1caa650c54ec402b9f0882663e55a984b0\"; username-localhost-8890=\"2|1:0|10:1555692944|23:username-localhost-8890|44:MTQ3Y2Q1NTJhMjI4NDA1ZGFmNjQxMTlhNDk2ZjcxNDc=|fee0a5d4a21ce8c927c097f24b9d6e015514e6c8562b17877ef7a20e7eecf9fa\""
+    }
+[LabApp | ERROR] 500 PUT /api/contents/content/01-learn-julia/02-arrays.ipynb?1556084108769 (::1) 3.30ms referer=http://localhost:8889/lab
+[LabApp | INFO] Starting buffering for c898b857-e577-43a3-acef-ffd7d77a2f64:f939cb16-0b71-475f-8487-a7990fdfd3db
+[LabApp | INFO] Starting buffering for 9a7bb5bf-c773-4fb6-a69c-202c8175baa7:8d965b92-351d-44b1-bc04-a87f6b95ae71
+[LabApp | INFO] Starting buffering for 458f4253-4717-4be6-8694-ec84df3c776a:81d00a5f-26eb-456c-928e-eb7dcd63dd51
+[LabApp | INFO] Starting buffering for eb0f401e-c649-4565-b09e-964f73db16b8:de5b9c17-5f6e-48c7-98eb-b46a1203f24a
+[LabApp | INFO] Starting buffering for a543cbc2-0192-4d82-86b4-fde51e44f2c4:9d67304a-a30c-4d92-b975-2af08f509f7f
+[LabApp | INFO] Starting buffering for 1c24c5c8-94ab-4596-aa9d-951e56cd8a2a:45806ad2-3f20-4fb3-9f8b-c78dceb7d783
+[LabApp | INFO] Starting buffering for 8ef7bd3f-c7d7-434d-afca-1c817f1f36ae:0976efeb-7251-4dd1-9260-442fcb7123a4
+[LabApp | INFO] Starting buffering for 9fafc515-b0be-48a6-87ae-faa030654ffc:1b95d31c-54cd-4732-9350-5154884fb98f
+[LabApp | INFO] Starting buffering for a24d191f-d014-4249-96f5-c046372292d8:370b2b17-7d24-4623-b0e1-f8c51ab067b2
+[LabApp | INFO] Adapting to protocol v5.0 for kernel ec187379-0c24-4c68-968d-b6fc1bb51b13
+[LabApp | INFO] interrupted
+[LabApp | CRITICAL] Shutdown confirmed
+[LabApp | INFO] Shutting down 11 kernels
+[LabApp | INFO] Kernel shutdown: a543cbc2-0192-4d82-86b4-fde51e44f2c4
+[LabApp | INFO] Kernel shutdown: a24d191f-d014-4249-96f5-c046372292d8
+[LabApp | INFO] Kernel shutdown: 458f4253-4717-4be6-8694-ec84df3c776a
+[LabApp | INFO] Kernel shutdown: 8ef7bd3f-c7d7-434d-afca-1c817f1f36ae
+[LabApp | INFO] Kernel shutdown: 1c24c5c8-94ab-4596-aa9d-951e56cd8a2a
+[LabApp | INFO] Kernel shutdown: 9a7bb5bf-c773-4fb6-a69c-202c8175baa7
+[LabApp | INFO] Kernel shutdown: 9fafc515-b0be-48a6-87ae-faa030654ffc
+[LabApp | INFO] Kernel shutdown: c898b857-e577-43a3-acef-ffd7d77a2f64
+[LabApp | INFO] Kernel shutdown: eb0f401e-c649-4565-b09e-964f73db16b8
+[LabApp | INFO] Kernel shutdown: 42a9bc9a-a5bc-4ed2-9492-7099f17bbdb8
+[LabApp | INFO] Kernel shutdown: ec187379-0c24-4c68-968d-b6fc1bb51b13
+[LabApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[LabApp | INFO] Loading the validate_assignment nbgrader serverextension
+[LabApp | WARNING] JupyterLab server extension not enabled, manually loading...
+[LabApp | INFO] JupyterLab extension loaded from /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyterlab
+[LabApp | INFO] JupyterLab application directory is /Library/Frameworks/Python.framework/Versions/3.6/share/jupyter/lab
+[LabApp | INFO] Serving notebooks from local directory: /Users/chrispyles/GitHub/data-science-in-julia
+[LabApp | INFO] 0 active kernels
+[LabApp | INFO] The Jupyter Notebook is running at:
+[LabApp | INFO] http://localhost:8888/
+[LabApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[LabApp | WARNING] Could not determine jupyterlab build status without nodejs
+[LabApp | WARNING] 404 GET /api/contents/content/01-learn-julia/Untitled.ipynb?content=0&1556084562446 (::1): No such file or directory: content/01-learn-julia/Untitled.ipynb
+[LabApp | WARNING] No such file or directory: content/01-learn-julia/Untitled.ipynb
+[LabApp | WARNING] 404 GET /api/contents/content/01-learn-julia/Untitled.ipynb?content=0&1556084562446 (::1) 31.15ms referer=http://localhost:8888/lab
+[LabApp | WARNING] Failed to fetch package metadata for '@jupyterlab/celltags': URLError(SSLError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:833)'),)
+[LabApp | INFO] Kernel started: a982214c-c8e0-4e51-9144-2d8ff88725bb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel a982214c-c8e0-4e51-9144-2d8ff88725bb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel a982214c-c8e0-4e51-9144-2d8ff88725bb
+[LabApp | INFO] Kernel started: c26323f0-f038-404c-a031-ab13c88ac7db
+[LabApp | INFO] Saving file at /content/01-learn-julia/02-arrays.ipynb
+[LabApp | INFO] Adapting to protocol v5.0 for kernel c26323f0-f038-404c-a031-ab13c88ac7db
+[LabApp | INFO] Saving file at /content/01-learn-julia/02-arrays.ipynb
+[LabApp | INFO] Starting buffering for c26323f0-f038-404c-a031-ab13c88ac7db:ec404039-459a-4a6a-826e-30bed7605334
+[LabApp | INFO] Starting buffering for a982214c-c8e0-4e51-9144-2d8ff88725bb:4003f7c8-2900-4015-817a-b44228d5a697
+[LabApp | INFO] interrupted
+[LabApp | CRITICAL] Shutdown confirmed
+[LabApp | INFO] Shutting down 2 kernels
+[LabApp | INFO] Kernel shutdown: a982214c-c8e0-4e51-9144-2d8ff88725bb
+[LabApp | INFO] Kernel shutdown: c26323f0-f038-404c-a031-ab13c88ac7db
+[LabApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[LabApp | INFO] Loading the validate_assignment nbgrader serverextension
+[LabApp | WARNING] JupyterLab server extension not enabled, manually loading...
+[LabApp | INFO] JupyterLab extension loaded from /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyterlab
+[LabApp | INFO] JupyterLab application directory is /Library/Frameworks/Python.framework/Versions/3.6/share/jupyter/lab
+[LabApp | INFO] Serving notebooks from local directory: /Users/chrispyles/GitHub/data-science-in-julia
+[LabApp | INFO] 0 active kernels
+[LabApp | INFO] The Jupyter Notebook is running at:
+[LabApp | INFO] http://localhost:8888/
+[LabApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[LabApp | WARNING] Could not determine jupyterlab build status without nodejs
+[LabApp | INFO] Kernel started: 664db5ad-9aaf-4e4f-9019-86d49d0f42be
+[LabApp | INFO] Kernel started: 4ce3f964-0411-430f-9dd0-53f931826e00
+[LabApp | WARNING] Failed to fetch package metadata for '@jupyterlab/celltags': URLError(SSLError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:833)'),)
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 664db5ad-9aaf-4e4f-9019-86d49d0f42be
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 664db5ad-9aaf-4e4f-9019-86d49d0f42be
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 4ce3f964-0411-430f-9dd0-53f931826e00
+[LabApp | INFO] Adapting to protocol v5.0 for kernel 4ce3f964-0411-430f-9dd0-53f931826e00
+[LabApp | INFO] Saving file at /content/01-learn-julia/02-arrays.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/02-arrays.ipynb
+[LabApp | INFO] Saving file at /content/01-learn-julia/02-arrays.ipynb
+[LabApp | INFO] Starting buffering for 664db5ad-9aaf-4e4f-9019-86d49d0f42be:47570d2a-505f-4741-b1eb-53a3a1e1b496
+[LabApp | INFO] Starting buffering for 4ce3f964-0411-430f-9dd0-53f931826e00:6cf2fe6a-7e83-4f75-a4f0-d3412aebf298
+[LabApp | INFO] interrupted
+[LabApp | CRITICAL] Shutdown confirmed
+[LabApp | INFO] Shutting down 2 kernels
+[LabApp | INFO] Kernel shutdown: 664db5ad-9aaf-4e4f-9019-86d49d0f42be
+[LabApp | INFO] Kernel shutdown: 4ce3f964-0411-430f-9dd0-53f931826e00
