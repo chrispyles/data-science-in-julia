@@ -1,10 +1,10 @@
 ---
 interact_link: content/solutions/02-dataframes-in-julia.ipynb
 kernel_name: julia-1.1
-title: '1. DataFrames in Julia'
+title: '2. DataFrames in Julia'
 prev_page:
-  url: /solutions/index
-  title: 'Exercise Solutions'
+  url: /solutions/01-basic-data-types
+  title: '1. The Basic Data Types'
 next_page:
   url: 
   title: ''

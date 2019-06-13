@@ -3,11 +3,11 @@ interact_link: content/solutions/index.ipynb
 kernel_name: julia-1.1
 title: 'Exercise Solutions'
 prev_page:
-  url: /02-builtins/04-missing-data
+  url: /03-builtins/04-missing-data
   title: 'Missing Data'
 next_page:
-  url: /solutions/02-dataframes-in-julia
-  title: '1. DataFrames in Julia'
+  url: /solutions/01-basic-data-types
+  title: '1. The Basic Data Types'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

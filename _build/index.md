@@ -6,8 +6,8 @@ prev_page:
   url: 
   title: ''
 next_page:
-  url: /01-learn-julia/index
-  title: 'The Basic Data Types'
+  url: /installing-dependencies
+  title: 'Installing Dependencies'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

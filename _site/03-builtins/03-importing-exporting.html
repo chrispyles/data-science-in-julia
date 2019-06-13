@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>Importing and Exporting Data</title>
+  <meta name="description" content="Import and Exporting Data">
+
+  <link rel="canonical" href="http://0.0.0.0:4000/03-builtins/03-importing-exporting.html">
+  <link rel="alternate" type="application/rss+xml" title="Data Science in Julia" href="http://0.0.0.0:4000/feed.xml">
+
+  <meta property="og:url"         content="http://0.0.0.0:4000/03-builtins/03-importing-exporting.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Importing and Exporting Data" />
+<meta property="og:description" content="Import and Exporting Data" />
+<meta property="og:image"       content="" />
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage":
+    "http://0.0.0.0:4000/03-builtins/03-importing-exporting.html",
+  "headline":
+    "Importing and Exporting Data",
+  "datePublished":
+    "2019-06-13T12:25:06-05:00",
+  "dateModified":
+    "2019-06-13T12:25:06-05:00",
+  "description":
+    "Import and Exporting Data",
+  "author": {
+    "@type": "Person",
+    "name": "Christopher Pyles"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Data 100 at UC Berkeley",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://0.0.0.0:4000",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http://0.0.0.0:4000",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#233947">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/images/logo/favicon.ico">
+
+  <!-- MathJax Config -->
+  <!-- Allow inline math using $ and automatically break long math lines -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    CommonHTML: {
+        linebreaks: {
+            automatic: true,
+        },
+    },
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML' async></script>
+
+  <!-- DOM updating function -->
+  <script>
+const runWhenDOMLoaded = cb => {
+  if (document.readyState != 'loading') {
+    cb()
+  } else if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', cb)
+  } else {
+    document.attachEvent('onreadystatechange', function() {
+      if (document.readyState == 'complete') cb()
+    })
+  }
+}
+
+// Helper function to init things quickly
+initFunction = function(myfunc) {
+  runWhenDOMLoaded(myfunc);
+  document.addEventListener('turbolinks:load', myfunc);
+};
+</script>
+
+  <!-- Define some javascript variables that will be useful in other javascript -->
+  <script>
+    const site_basename = '';
+  </script>
+
+  <!-- Add AnchorJS to let headers be linked -->
+  <script src="/assets/js/anchor.min.js"  type="text/javascript"></script>
+  <script>
+
+initFunction(function () {
+    anchors.add("main h1, main h2, main h3, main h4")
+});
+
+</script>
+
+  <!-- Include Turbolinks to make page loads fast -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="/assets/js/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Load nbinteract for widgets -->
+  <script src="https://unpkg.com/nbinteract-core" async></script>
+
+  <!-- Load Thebelab for interactive widgets -->
+  <!-- Include Thebelab for interactive code if it's enabled -->
+
+
+  <!-- Google analytics -->
+  <script src="/assets/js/ga.js" async></script>
+
+  <!-- Clipboard copy button -->
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
+
+  <!-- Load JS that depends on site variables -->
+  <script>
+/**
+ * Set up copy/paste for code blocks
+ */
+const codeCellId = index => `codecell${index}`
+
+const clipboardButton = id =>
+  `<a class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
+    <img src="/assets/images/copy-button.svg" alt="Copy to clipboard">
+  </a>`
+
+// Clears selected text since ClipboardJS will select the text when copying
+const clearSelection = () => {
+  if (window.getSelection) {
+    window.getSelection().removeAllRanges()
+  } else if (document.selection) {
+    document.selection.empty()
+  }
+}
+
+// Changes tooltip text for two seconds, then changes it back
+const temporarilyChangeTooltip = (el, newText) => {
+  const oldText = el.getAttribute('data-tooltip')
+  el.setAttribute('data-tooltip', newText)
+  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
+}
+
+const addCopyButtonToCodeCells = () => {
+  // If ClipboardJS hasn't loaded, wait a bit and try again. This
+  // happens because we load ClipboardJS asynchronously.
+  if (window.ClipboardJS === undefined) {
+    setTimeout(addCopyButtonToCodeCells, 250)
+    return
+  }
+
+  const codeCells = document.querySelectorAll('div.highlighter-rouge:not(.output) pre')
+  codeCells.forEach((codeCell, index) => {
+    const id = codeCellId(index)
+    codeCell.setAttribute('id', id)
+    if (document.querySelector(`pre#${id} + a`) == null) {
+      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
+    }
+  })
+
+  const clipboard = new ClipboardJS('.copybtn')
+  clipboard.on('success', event => {
+    clearSelection()
+    temporarilyChangeTooltip(event.trigger, 'Copied!')
+  })
+
+  clipboard.on('error', event => {
+    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
+  })
+
+  // Get rid of clipboard before the next page visit to avoid memory leak
+  document.addEventListener('turbolinks:before-visit', () =>
+    clipboard.destroy()
+  )
+}
+
+initFunction(addCopyButtonToCodeCells);
+</script>
+
+  <!-- Hide cell code -->
+  
+<script>
+/**
+Add buttons to hide code cells
+*/
+
+
+var setCodeCellVisibility = function(inputField, kind) {
+    // Update the image and class for hidden
+    var id = inputField.getAttribute('data-id');
+    var codeCell = document.querySelector(`#${id}`);
+
+    if (kind === "visible") {
+        codeCell.classList.remove('hidden');
+        inputField.checked = true;
+    } else {
+        codeCell.classList.add('hidden');
+        inputField.checked = false;
+    }
+}
+
+var toggleCodeCellVisibility = function (event) {
+    // The label is clicked, and now we decide what to do based on the input field's clicked status
+    if (event.target.tagName === "LABEL") {
+        var inputField = event.target.previousElementSibling;
+    } else {
+        // It is the span inside the target
+        var inputField = event.target.parentElement.previousElementSibling;
+    }
+
+    if (inputField.checked === true) {
+        setCodeCellVisibility(inputField, "visible");
+    } else {
+        setCodeCellVisibility(inputField, "hidden");
+    }
+}
+
+
+// Button constructor
+const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
+
+var addHideButton = function () {
+  // If a hide button is already added, don't add another
+  if (document.querySelector('div.hidecode input') !== null) {
+      return;
+  }
+
+  // Find the input cells and add a hide button
+  document.querySelectorAll('div.input_area div.highlight').forEach(function (item, index) {
+    if (!item.parentElement.classList.contains("hidecode")) {
+        // Skip the cell if it doesn't have a hidecode class
+        return;
+    }
+
+    const id = codeCellId(index)
+    item.setAttribute('id', id);
+    item.insertAdjacentHTML('afterend', hideCodeButton(id))
+
+    // Set up the visibility toggle
+    hideLink = document.querySelector(`#${id} + input + label`);
+    hideLink.addEventListener('click', toggleCodeCellVisibility)
+  });
+}
+
+
+// Initialize the hide buttos
+var initHiddenCells = function () {
+    // Add hide buttons to the cells
+    addHideButton();
+
+    // Toggle the code cells that should be hidden
+    document.querySelectorAll('div.hidecode input').forEach(function (item) {
+        setCodeCellVisibility(item, 'hidden');
+        item.checked = true;
+    })
+}
+
+initFunction(initHiddenCells);
+
+</script>
+
+
+  <!-- Load custom website scripts -->
+  <script src="/assets/js/scripts.js" async></script>
+
+  <!-- Load custom user CSS and JS  -->
+  <script src="/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/assets/custom/custom.css">
+
+  <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
+  
+
+  <!-- Lunr search code - will only be executed on the /search page -->
+  <script src="/assets/js/lunr/lunr.min.js" type="text/javascript"></script>
+  <script>var initQuery = function() {
+  // See if we have a search box
+  var searchInput = document.querySelector('input#lunr_search');
+  if (searchInput === null) {
+    return;
+  }
+
+  // Function to parse our lunr cache
+  var idx = lunr(function () {
+    this.field('title')
+    this.field('excerpt')
+    this.field('categories')
+    this.field('tags')
+    this.ref('id')
+
+    this.pipeline.remove(lunr.trimmer)
+
+    for (var item in store) {
+      this.add({
+        title: store[item].title,
+        excerpt: store[item].excerpt,
+        categories: store[item].categories,
+        tags: store[item].tags,
+        id: item
+      })
+    }
+  });
+
+  // Run search upon keyup
+  searchInput.addEventListener('keyup', function () {
+    var resultdiv = document.querySelector('#results');
+    var query = document.querySelector("input#lunr_search").value.toLowerCase();
+    var result =
+      idx.query(function (q) {
+        query.split(lunr.tokenizer.separator).forEach(function (term) {
+          q.term(term, { boost: 100 })
+          if(query.lastIndexOf(" ") != query.length-1){
+            q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+          }
+          if (term != ""){
+            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+          }
+        })
+      });
+
+      // Empty the results div
+      while (resultdiv.firstChild) {
+        resultdiv.removeChild(resultdiv.firstChild);
+      }
+
+    resultdiv.insertAdjacentHTML('afterbegin', '<p class="results__found">'+result.length+' Result(s) found</p>');
+    for (var item in result) {
+      var ref = result[item].ref;
+      if(store[ref].teaser){
+        var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<div class="archive__item-teaser">'+
+                '<img src="'+store[ref].teaser+'" alt="">'+
+              '</div>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      else{
+    	  var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      resultdiv.insertAdjacentHTML('beforeend', searchitem);
+    }
+  });
+};
+
+initFunction(initQuery);
+</script>
+</head>
+
+  <body>
+    <!-- .js-show-sidebar shows sidebar by default -->
+    <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
+
+
+
+<nav id="js-sidebar" class="c-textbook__sidebar">
+  
+  <h2 class="c-sidebar__title">Data Science in Julia</h2>
+  <ul class="c-sidebar__chapters">
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/index.html"
+        >
+          
+          Welcome
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/installing-dependencies.html"
+        >
+          
+          Installing Dependencies
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">Learn Julia</li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/01-learn-julia/index.html"
+        >
+          
+            1.
+          
+          The Basic Data Types
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/01-learn-julia/01-basics.html"
+                >
+                  
+                    1.1
+                  
+                  Numbers
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/01-learn-julia/02-arrays.html"
+                >
+                  
+                    1.2
+                  
+                  Arrays
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/02-functions-control-flow/index.html"
+        >
+          
+            2.
+          
+          Functions & Control Flow
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/02-functions-control-flow/01-functions.html"
+                >
+                  
+                    2.1
+                  
+                  Functions
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">Rectangular Data</li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/03-builtins/index.html"
+        >
+          
+            3.
+          
+          DataFrames in Julia
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/03-builtins/01-dataframes.html"
+                >
+                  
+                    3.1
+                  
+                  DataFrames.jl
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/03-builtins/02-categorical-arrays.html"
+                >
+                  
+                    3.2
+                  
+                  Categorical Arrays
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry c-sidebar__entry--active"
+                  href="/03-builtins/03-importing-exporting.html"
+                >
+                  
+                    3.3
+                  
+                  Importing and Exporting Data
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/03-builtins/04-missing-data.html"
+                >
+                  
+                    3.4
+                  
+                  Missing Data
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/solutions/index.html"
+        >
+          
+          Exercise Solutions
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/solutions/01-basic-data-types.html"
+                >
+                  
+                  1. The Basic Data Types
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/solutions/02-dataframes-in-julia.html"
+                >
+                  
+                  2. DataFrames in Julia
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+  </ul>
+  <p class="sidebar_footer">Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter Book</a></p>
+</nav>
+
+      
+      <!-- Shamelessly copied from minimal mistakes -->
+
+
+<!-- TOC will only show up if it has at least one item -->
+
+
+  <aside class="sidebar__right">
+    <nav class="onthispage">
+      <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
+      <ul class="toc__menu">
+  <li><a href="#csv-files">CSV Files</a>
+    <ul>
+      <li><a href="#reading-data">Reading Data</a></li>
+      <li><a href="#exporting-data">Exporting Data</a></li>
+    </ul>
+  </li>
+  <li><a href="#json-files">JSON Files</a>
+    <ul>
+      <li><a href="#reading-data-1">Reading Data</a></li>
+      <li><a href="#writing-data">Writing Data</a></li>
+      <li><a href="#reproducing-the-pipeline">Reproducing the Pipeline</a></li>
+    </ul>
+  </li>
+  <li><a href="#exercises">Exercises</a></li>
+</ul>
+    </nav>
+  </aside>
+
+
+      
+      <main class="c-textbook__page" tabindex="-1">
+          <div class="o-wrapper">
+            <div class="c-sidebar-toggle">
+  <!-- We show the sidebar by default so we use .is-active -->
+  <button
+    id="js-sidebar-toggle"
+    class="hamburger hamburger--arrowalt is-active"
+  >
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+    <span class="c-sidebar-toggle__label">Toggle Sidebar</span>
+  </button>
+</div>
+
+            
+<div class="buttons">
+
+
+
+
+
+</div>
+
+
+            <div class="c-textbook__content">
+              <h1 id="import-and-exporting-data">Import and Exporting Data</h1>
+
+<p>It is common practice to import data from external files so that the DataFrames do not need to be hardcoded. Julia provides the CSV.jl package to handle reading and writing CSV files; it is also easily integrated with DataFrames.jl.</p>
+
+<p><em>A quick note about the data:</em> The data in this section is exported from a pre-loaded data set in R with information about different Iris species. The data original comes from <a href="https://archive.ics.uci.edu/ml/datasets/Iris">UCI</a>.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">using</span> <span class="n">CSV</span><span class="x">,</span> <span class="n">DataFrames</span>
+</code></pre></div></div>
+
+<h2 id="csv-files">CSV Files</h2>
+
+<h3 id="reading-data">Reading Data</h3>
+
+<p>The easiest way to load a CSV file is to call <code class="highlighter-rouge">CSV.read()</code> on a string containing the relative file path, as with any other language. This function reads the file and outputs a <code class="highlighter-rouge">DataFrame</code> object with the data from that file.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">iris</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="x">(</span><span class="s">"data/iris.csv"</span><span class="x">)</span>
+<span class="n">first</span><span class="x">(</span><span class="n">iris</span><span class="x">,</span> <span class="mi">5</span><span class="x">)</span>
+</code></pre></div></div>
+
+<div class="output output_html">
+<table class="data-frame"><thead><tr><th></th><th>Sepal.Length</th><th>Sepal.Width</th><th>Petal.Length</th><th>Petal.Width</th><th>Species</th></tr><tr><th></th><th>Float64⍰</th><th>Float64⍰</th><th>Float64⍰</th><th>Float64⍰</th><th>String⍰</th></tr></thead><tbody><p>5 rows × 5 columns</p><tr><th>1</th><td>5.1</td><td>3.5</td><td>1.4</td><td>0.2</td><td>setosa</td></tr><tr><th>2</th><td>4.9</td><td>3.0</td><td>1.4</td><td>0.2</td><td>setosa</td></tr><tr><th>3</th><td>4.7</td><td>3.2</td><td>1.3</td><td>0.2</td><td>setosa</td></tr><tr><th>4</th><td>4.6</td><td>3.1</td><td>1.5</td><td>0.2</td><td>setosa</td></tr><tr><th>5</th><td>5.0</td><td>3.6</td><td>1.4</td><td>0.2</td><td>setosa</td></tr></tbody></table>
+</div>
+
+<p>We apply the <code class="highlighter-rouge">first</code> function so that the cell only outputs the first 5 rows of the DataFrame. Some files, TSV for example, are similar to CSV files but use different delimeters. To load these into Julia, you can set the <code class="highlighter-rouge">delim</code> argument to a String containing the separator for that file. An example for a TSV file is given below.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">iris_tsv</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="x">(</span><span class="s">"data/iris.tsv"</span><span class="x">,</span> <span class="n">delim</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="x">)</span>
+<span class="n">first</span><span class="x">(</span><span class="n">iris_tsv</span><span class="x">,</span> <span class="mi">5</span><span class="x">)</span>
+</code></pre></div></div>
+
+<div class="output output_html">
+<table class="data-frame"><thead><tr><th></th><th>Sepal.Length</th><th>Sepal.Width</th><th>Petal.Length</th><th>Petal.Width</th><th>Species</th></tr><tr><th></th><th>Float64⍰</th><th>Float64⍰</th><th>Float64⍰</th><th>Float64⍰</th><th>String⍰</th></tr></thead><tbody><p>5 rows × 5 columns</p><tr><th>1</th><td>5.1</td><td>3.5</td><td>1.4</td><td>0.2</td><td>setosa</td></tr><tr><th>2</th><td>4.9</td><td>3.0</td><td>1.4</td><td>0.2</td><td>setosa</td></tr><tr><th>3</th><td>4.7</td><td>3.2</td><td>1.3</td><td>0.2</td><td>setosa</td></tr><tr><th>4</th><td>4.6</td><td>3.1</td><td>1.5</td><td>0.2</td><td>setosa</td></tr><tr><th>5</th><td>5.0</td><td>3.6</td><td>1.4</td><td>0.2</td><td>setosa</td></tr></tbody></table>
+</div>
+
+<p>It is import for this function that you append the package name <code class="highlighter-rouge">CSV</code> to the beginning as the Julia base package includes a <code class="highlighter-rouge">read</code> function that performs a different function. Other helpful keyword arguments for <code class="highlighter-rouge">CSV.read</code> are:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">header</code></td>
+      <td><code class="highlighter-rouge">1</code></td>
+      <td>Row index in file which contains column headers</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">missingstrings</code>, <code class="highlighter-rouge">missingstring</code></td>
+      <td><code class="highlighter-rouge">""</code></td>
+      <td>String or vector of strings to parse as <code class="highlighter-rouge">missing</code> when loading the DataFrame</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">delim</code></td>
+      <td><code class="highlighter-rouge">","</code></td>
+      <td>Value delimiter in each row</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">truestrings</code>, <code class="highlighter-rouge">falsestrings</code></td>
+      <td><code class="highlighter-rouge">nothing</code></td>
+      <td>Vector of strings containing values to parse as <code class="highlighter-rouge">true</code> and <code class="highlighter-rouge">false</code>, respectively</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">types</code></td>
+      <td><code class="highlighter-rouge">nothing</code></td>
+      <td>Vector or Dict of types to use for columns</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">categorical</code></td>
+      <td><code class="highlighter-rouge">false</code></td>
+      <td>Bool to indicate whether or not String columns should be parsed into <code class="highlighter-rouge">CategoricalArray</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <code class="highlighter-rouge">missingstrings</code> and <code class="highlighter-rouge">missingstring</code> arguments have to do with values that are <code class="highlighter-rouge">missing</code> in the data set; this is a topic that will be covered in a later section.</p>
+
+<h3 id="exporting-data">Exporting Data</h3>
+
+<p>To export a DataFrame, CSV.jl provides <code class="highlighter-rouge">CSV.write</code>. As with <code class="highlighter-rouge">CSV.read</code>, appending the <code class="highlighter-rouge">CSV</code> is important here, as the base package includes a <code class="highlighter-rouge">write</code> method as well. To write a DataFrame, pass it to <code class="highlighter-rouge">CSV.write</code> with a filepath as the first argument:</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">CSV</span><span class="o">.</span><span class="n">write</span><span class="x">(</span><span class="s">"export/iris-export.csv"</span><span class="x">,</span> <span class="n">iris</span><span class="x">)</span>
+</code></pre></div></div>
+
+<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"iris-export.csv"
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">CSV.write</code> includes many of the same optional arguments as <code class="highlighter-rouge">CSV.read</code>; the main ones to consider are <code class="highlighter-rouge">delim</code>, <code class="highlighter-rouge">missingstring</code>, and <code class="highlighter-rouge">header</code>, the last of which allows you to overwrite the column headings in the DataFrame object that you passed to the function.</p>
+
+<h2 id="json-files">JSON Files</h2>
+
+<h3 id="reading-data-1">Reading Data</h3>
+
+<p>Julia provides the JSON.jl package to parse strings formatted as JSON files. To load a JSON file using JSON.jl, the best way is to pass a filepath to <code class="highlighter-rouge">JSON.parsefile</code>.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">using</span> <span class="n">JSON</span>
+</code></pre></div></div>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parsed_iris</span> <span class="o">=</span> <span class="n">JSON</span><span class="o">.</span><span class="n">parsefile</span><span class="x">(</span><span class="s">"data/iris.json"</span><span class="x">)</span>
+</code></pre></div></div>
+
+<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>150-element Array{Any,1}:
+ Dict{String,Any}("Sepal.Width"=&gt;3.5,"Petal.Length"=&gt;1.4,"Petal.Width"=&gt;0.2,"Species"=&gt;"setosa","Sepal.Length"=&gt;5.1)   
+ Dict{String,Any}("Sepal.Width"=&gt;3,"Petal.Length"=&gt;1.4,"Petal.Width"=&gt;0.2,"Species"=&gt;"setosa","Sepal.Length"=&gt;4.9)     
+ Dict{String,Any}("Sepal.Width"=&gt;3.2,"Petal.Length"=&gt;1.3,"Petal.Width"=&gt;0.2,"Species"=&gt;"setosa","Sepal.Length"=&gt;4.7)   
+ Dict{String,Any}("Sepal.Width"=&gt;3.1,"Petal.Length"=&gt;1.5,"Petal.Width"=&gt;0.2,"Species"=&gt;"setosa","Sepal.Length"=&gt;4.6)   
+ Dict{String,Any}("Sepal.Width"=&gt;3.6,"Petal.Length"=&gt;1.4,"Petal.Width"=&gt;0.2,"Species"=&gt;"setosa","Sepal.Length"=&gt;5)     
+ Dict{String,Any}("Sepal.Width"=&gt;3.9,"Petal.Length"=&gt;1.7,"Petal.Width"=&gt;0.4,"Species"=&gt;"setosa","Sepal.Length"=&gt;5.4)   
+ Dict{String,Any}("Sepal.Width"=&gt;3.4,"Petal.Length"=&gt;1.4,"Petal.Width"=&gt;0.3,"Species"=&gt;"setosa","Sepal.Length"=&gt;4.6)   
+ Dict{String,Any}("Sepal.Width"=&gt;3.4,"Petal.Length"=&gt;1.5,"Petal.Width"=&gt;0.2,"Species"=&gt;"setosa","Sepal.Length"=&gt;5)     
+ Dict{String,Any}("Sepal.Width"=&gt;2.9,"Petal.Length"=&gt;1.4,"Petal.Width"=&gt;0.2,"Species"=&gt;"setosa","Sepal.Length"=&gt;4.4)   
+ Dict{String,Any}("Sepal.Width"=&gt;3.1,"Petal.Length"=&gt;1.5,"Petal.Width"=&gt;0.1,"Species"=&gt;"setosa","Sepal.Length"=&gt;4.9)   
+ Dict{String,Any}("Sepal.Width"=&gt;3.7,"Petal.Length"=&gt;1.5,"Petal.Width"=&gt;0.2,"Species"=&gt;"setosa","Sepal.Length"=&gt;5.4)   
+ Dict{String,Any}("Sepal.Width"=&gt;3.4,"Petal.Length"=&gt;1.6,"Petal.Width"=&gt;0.2,"Species"=&gt;"setosa","Sepal.Length"=&gt;4.8)   
+ Dict{String,Any}("Sepal.Width"=&gt;3,"Petal.Length"=&gt;1.4,"Petal.Width"=&gt;0.1,"Species"=&gt;"setosa","Sepal.Length"=&gt;4.8)     
+ ⋮                                                                                                                     
+ Dict{String,Any}("Sepal.Width"=&gt;3,"Petal.Length"=&gt;4.8,"Petal.Width"=&gt;1.8,"Species"=&gt;"virginica","Sepal.Length"=&gt;6)    
+ Dict{String,Any}("Sepal.Width"=&gt;3.1,"Petal.Length"=&gt;5.4,"Petal.Width"=&gt;2.1,"Species"=&gt;"virginica","Sepal.Length"=&gt;6.9)
+ Dict{String,Any}("Sepal.Width"=&gt;3.1,"Petal.Length"=&gt;5.6,"Petal.Width"=&gt;2.4,"Species"=&gt;"virginica","Sepal.Length"=&gt;6.7)
+ Dict{String,Any}("Sepal.Width"=&gt;3.1,"Petal.Length"=&gt;5.1,"Petal.Width"=&gt;2.3,"Species"=&gt;"virginica","Sepal.Length"=&gt;6.9)
+ Dict{String,Any}("Sepal.Width"=&gt;2.7,"Petal.Length"=&gt;5.1,"Petal.Width"=&gt;1.9,"Species"=&gt;"virginica","Sepal.Length"=&gt;5.8)
+ Dict{String,Any}("Sepal.Width"=&gt;3.2,"Petal.Length"=&gt;5.9,"Petal.Width"=&gt;2.3,"Species"=&gt;"virginica","Sepal.Length"=&gt;6.8)
+ Dict{String,Any}("Sepal.Width"=&gt;3.3,"Petal.Length"=&gt;5.7,"Petal.Width"=&gt;2.5,"Species"=&gt;"virginica","Sepal.Length"=&gt;6.7)
+ Dict{String,Any}("Sepal.Width"=&gt;3,"Petal.Length"=&gt;5.2,"Petal.Width"=&gt;2.3,"Species"=&gt;"virginica","Sepal.Length"=&gt;6.7)  
+ Dict{String,Any}("Sepal.Width"=&gt;2.5,"Petal.Length"=&gt;5,"Petal.Width"=&gt;1.9,"Species"=&gt;"virginica","Sepal.Length"=&gt;6.3)  
+ Dict{String,Any}("Sepal.Width"=&gt;3,"Petal.Length"=&gt;5.2,"Petal.Width"=&gt;2,"Species"=&gt;"virginica","Sepal.Length"=&gt;6.5)    
+ Dict{String,Any}("Sepal.Width"=&gt;3.4,"Petal.Length"=&gt;5.4,"Petal.Width"=&gt;2.3,"Species"=&gt;"virginica","Sepal.Length"=&gt;6.2)
+ Dict{String,Any}("Sepal.Width"=&gt;3,"Petal.Length"=&gt;5.1,"Petal.Width"=&gt;1.8,"Species"=&gt;"virginica","Sepal.Length"=&gt;5.9)  
+</code></pre></div></div>
+
+<p>Sadly, there isn’t yet an package which has a pipeline to get from an array of Dicts to a DataFrame, so we need to build our own function. The function defined below will take in a filepath and read in the JSON file and then use a Dict and array comprehensions to create a DataFrame.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span><span class="nf"> load_json</span><span class="x">(</span><span class="n">path</span><span class="x">)</span>
+    <span class="n">dictarr</span> <span class="o">=</span> <span class="n">JSON</span><span class="o">.</span><span class="n">parsefile</span><span class="x">(</span><span class="n">path</span><span class="x">)</span>
+    <span class="n">df_dict</span> <span class="o">=</span> <span class="n">Dict</span><span class="x">()</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="k">in</span> <span class="n">keys</span><span class="x">(</span><span class="n">dictarr</span><span class="x">[</span><span class="mi">1</span><span class="x">])</span>
+        <span class="n">df_dict</span><span class="x">[</span><span class="n">col</span><span class="x">]</span> <span class="o">=</span> <span class="x">[</span><span class="n">row</span><span class="x">[</span><span class="n">col</span><span class="x">]</span> <span class="k">for</span> <span class="n">row</span> <span class="k">in</span> <span class="n">dictarr</span><span class="x">]</span>
+    <span class="k">end</span>
+    <span class="k">return</span> <span class="n">DataFrame</span><span class="x">(</span><span class="n">df_dict</span><span class="x">)</span>
+<span class="k">end</span>
+
+<span class="n">iris_json</span> <span class="o">=</span> <span class="n">load_json</span><span class="x">(</span><span class="s">"data/iris.json"</span><span class="x">)</span>
+<span class="n">first</span><span class="x">(</span><span class="n">iris_json</span><span class="x">,</span> <span class="mi">5</span><span class="x">)</span>
+</code></pre></div></div>
+
+<div class="output output_html">
+<table class="data-frame"><thead><tr><th></th><th>Petal.Length</th><th>Petal.Width</th><th>Sepal.Length</th><th>Sepal.Width</th><th>Species</th></tr><tr><th></th><th>Real</th><th>Real</th><th>Real</th><th>Real</th><th>String</th></tr></thead><tbody><p>5 rows × 5 columns</p><tr><th>1</th><td>1.4</td><td>0.2</td><td>5.1</td><td>3.5</td><td>setosa</td></tr><tr><th>2</th><td>1.4</td><td>0.2</td><td>4.9</td><td>3</td><td>setosa</td></tr><tr><th>3</th><td>1.3</td><td>0.2</td><td>4.7</td><td>3.2</td><td>setosa</td></tr><tr><th>4</th><td>1.5</td><td>0.2</td><td>4.6</td><td>3.1</td><td>setosa</td></tr><tr><th>5</th><td>1.4</td><td>0.2</td><td>5</td><td>3.6</td><td>setosa</td></tr></tbody></table>
+</div>
+
+<p>As you can see, our algorithm is farily simple. We simple load the array of Dicts, create a new, empty Dict, and then iterate through the columns (encoded as the keys of each Dict) and use an array comprehension to extract the values for that column from each row. We then pass this new Dict to <code class="highlighter-rouge">DataFrame</code>, which constructs the DataFrame that we want.</p>
+
+<h3 id="writing-data">Writing Data</h3>
+
+<p>To write a JSON file, you need to load a Dict into <code class="highlighter-rouge">JSON.json</code> and write the string that is returned to a file.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span><span class="nf"> to_array</span><span class="x">(</span><span class="n">df</span><span class="x">)</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="x">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="k">in</span> <span class="mi">1</span><span class="x">:</span><span class="n">size</span><span class="x">(</span><span class="n">df</span><span class="x">,</span> <span class="mi">1</span><span class="x">)</span>
+        <span class="n">push!</span><span class="x">(</span><span class="n">arr</span><span class="x">,</span> <span class="n">Dict</span><span class="x">((</span><span class="n">col</span> <span class="o">=&gt;</span> <span class="n">df</span><span class="x">[</span><span class="n">row</span><span class="x">,</span> <span class="n">col</span><span class="x">]</span> <span class="k">for</span> <span class="n">col</span> <span class="k">in</span> <span class="n">names</span><span class="x">(</span><span class="n">df</span><span class="x">))))</span>
+    <span class="k">end</span>
+    <span class="k">return</span> <span class="n">arr</span>
+<span class="k">end</span>
+
+<span class="n">to_array</span><span class="x">(</span><span class="n">iris_json</span><span class="x">)</span>
+</code></pre></div></div>
+
+<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>150-element Array{Any,1}:
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.4,Symbol("Sepal.Width")=&gt;3.5,Symbol("Sepal.Length")=&gt;5.1,Symbol("Petal.Width")=&gt;0.2,:Species=&gt;"setosa")   
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.4,Symbol("Sepal.Width")=&gt;3,Symbol("Sepal.Length")=&gt;4.9,Symbol("Petal.Width")=&gt;0.2,:Species=&gt;"setosa")     
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.3,Symbol("Sepal.Width")=&gt;3.2,Symbol("Sepal.Length")=&gt;4.7,Symbol("Petal.Width")=&gt;0.2,:Species=&gt;"setosa")   
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.5,Symbol("Sepal.Width")=&gt;3.1,Symbol("Sepal.Length")=&gt;4.6,Symbol("Petal.Width")=&gt;0.2,:Species=&gt;"setosa")   
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.4,Symbol("Sepal.Width")=&gt;3.6,Symbol("Sepal.Length")=&gt;5,Symbol("Petal.Width")=&gt;0.2,:Species=&gt;"setosa")     
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.7,Symbol("Sepal.Width")=&gt;3.9,Symbol("Sepal.Length")=&gt;5.4,Symbol("Petal.Width")=&gt;0.4,:Species=&gt;"setosa")   
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.4,Symbol("Sepal.Width")=&gt;3.4,Symbol("Sepal.Length")=&gt;4.6,Symbol("Petal.Width")=&gt;0.3,:Species=&gt;"setosa")   
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.5,Symbol("Sepal.Width")=&gt;3.4,Symbol("Sepal.Length")=&gt;5,Symbol("Petal.Width")=&gt;0.2,:Species=&gt;"setosa")     
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.4,Symbol("Sepal.Width")=&gt;2.9,Symbol("Sepal.Length")=&gt;4.4,Symbol("Petal.Width")=&gt;0.2,:Species=&gt;"setosa")   
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.5,Symbol("Sepal.Width")=&gt;3.1,Symbol("Sepal.Length")=&gt;4.9,Symbol("Petal.Width")=&gt;0.1,:Species=&gt;"setosa")   
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.5,Symbol("Sepal.Width")=&gt;3.7,Symbol("Sepal.Length")=&gt;5.4,Symbol("Petal.Width")=&gt;0.2,:Species=&gt;"setosa")   
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.6,Symbol("Sepal.Width")=&gt;3.4,Symbol("Sepal.Length")=&gt;4.8,Symbol("Petal.Width")=&gt;0.2,:Species=&gt;"setosa")   
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;1.4,Symbol("Sepal.Width")=&gt;3,Symbol("Sepal.Length")=&gt;4.8,Symbol("Petal.Width")=&gt;0.1,:Species=&gt;"setosa")     
+ ⋮                                                                                                                                                    
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;4.8,Symbol("Sepal.Width")=&gt;3,Symbol("Sepal.Length")=&gt;6,Symbol("Petal.Width")=&gt;1.8,:Species=&gt;"virginica")    
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;5.4,Symbol("Sepal.Width")=&gt;3.1,Symbol("Sepal.Length")=&gt;6.9,Symbol("Petal.Width")=&gt;2.1,:Species=&gt;"virginica")
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;5.6,Symbol("Sepal.Width")=&gt;3.1,Symbol("Sepal.Length")=&gt;6.7,Symbol("Petal.Width")=&gt;2.4,:Species=&gt;"virginica")
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;5.1,Symbol("Sepal.Width")=&gt;3.1,Symbol("Sepal.Length")=&gt;6.9,Symbol("Petal.Width")=&gt;2.3,:Species=&gt;"virginica")
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;5.1,Symbol("Sepal.Width")=&gt;2.7,Symbol("Sepal.Length")=&gt;5.8,Symbol("Petal.Width")=&gt;1.9,:Species=&gt;"virginica")
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;5.9,Symbol("Sepal.Width")=&gt;3.2,Symbol("Sepal.Length")=&gt;6.8,Symbol("Petal.Width")=&gt;2.3,:Species=&gt;"virginica")
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;5.7,Symbol("Sepal.Width")=&gt;3.3,Symbol("Sepal.Length")=&gt;6.7,Symbol("Petal.Width")=&gt;2.5,:Species=&gt;"virginica")
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;5.2,Symbol("Sepal.Width")=&gt;3,Symbol("Sepal.Length")=&gt;6.7,Symbol("Petal.Width")=&gt;2.3,:Species=&gt;"virginica")  
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;5,Symbol("Sepal.Width")=&gt;2.5,Symbol("Sepal.Length")=&gt;6.3,Symbol("Petal.Width")=&gt;1.9,:Species=&gt;"virginica")  
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;5.2,Symbol("Sepal.Width")=&gt;3,Symbol("Sepal.Length")=&gt;6.5,Symbol("Petal.Width")=&gt;2,:Species=&gt;"virginica")    
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;5.4,Symbol("Sepal.Width")=&gt;3.4,Symbol("Sepal.Length")=&gt;6.2,Symbol("Petal.Width")=&gt;2.3,:Species=&gt;"virginica")
+ Dict{Symbol,Any}(Symbol("Petal.Length")=&gt;5.1,Symbol("Sepal.Width")=&gt;3,Symbol("Sepal.Length")=&gt;5.9,Symbol("Petal.Width")=&gt;1.8,:Species=&gt;"virginica")  
+</code></pre></div></div>
+
+<p>To write this to a JSON file, we can use <code class="highlighter-rouge">JSON.json</code> in conjuction with the base package’s <code class="highlighter-rouge">write</code> method.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">json_string</span> <span class="o">=</span> <span class="n">JSON</span><span class="o">.</span><span class="n">json</span><span class="x">(</span><span class="n">to_array</span><span class="x">(</span><span class="n">iris_json</span><span class="x">))</span>
+<span class="n">write</span><span class="x">(</span><span class="s">"export/iris-export.json"</span><span class="x">,</span> <span class="n">json_string</span><span class="x">)</span>
+</code></pre></div></div>
+
+<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>14459
+</code></pre></div></div>
+
+<p>The output that we see above is the number of bytes in the file that we’ve just written.</p>
+
+<h3 id="reproducing-the-pipeline">Reproducing the Pipeline</h3>
+
+<p>For ease of reproducing this pipeline in your future data science endeavors, we include this pipeline in the <a href="json_pipeline.jl">json_pipeline.jl</a> file, that you may make use of as you need to. To use it, simply load the file from wherever you have it downloaded using <code class="highlighter-rouge">include</code>.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">include</span><span class="x">(</span><span class="s">"json_pipeline.jl"</span><span class="x">)</span>
+</code></pre></div></div>
+
+<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>write_json (generic function with 1 method)
+</code></pre></div></div>
+
+<p>The file includes the functions <code class="highlighter-rouge">load_json</code> and <code class="highlighter-rouge">write_json</code>, as well as the helper function <code class="highlighter-rouge">to_array</code>. Read their docstrings for more information on each function.</p>
+
+<h2 id="exercises">Exercises</h2>
+
+<p><strong>Exercise 1.3.1:</strong> Write code to open the following text file as a DataFrame. The assume the filename is <code class="highlighter-rouge">data.txt</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Col_1|Col_2|Col_3
+1|2|3
+4|5|6
+</code></pre></div></div>
+
+<p><strong>Exercise 1.3.2:</strong> How would you adapt the <code class="highlighter-rouge">load_json</code> function if the data in your JSON file as oriented as a dictionary of columns to arrays of values, e.g.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ 
+    "Col_1" : [1, 4],
+    "Col_2" : [2, 5],
+    "Col_3" : [3, 6]
+}
+</code></pre></div></div>
+
+              <nav class="c-page__nav">
+  
+    
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/03-builtins/02-categorical-arrays">
+      〈 <span class="u-margin-right-tiny"></span> Categorical Arrays
+    </a>
+  
+
+  
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/03-builtins/04-missing-data">
+      Missing Data <span class="u-margin-right-tiny"></span> 〉
+    </a>
+  
+</nav>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>
