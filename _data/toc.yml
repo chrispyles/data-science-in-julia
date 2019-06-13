@@ -23,10 +23,10 @@
 
 # Top-level page
 - title: Welcome
-  url: /index
+  url: 00-welcome/index
   not_numbered: true
 - title: Installing Dependencies
-  url: /installing-dependencies
+  url: 00-welcome/installing-dependencies
   not_numbered: true
 
 - divider: true
