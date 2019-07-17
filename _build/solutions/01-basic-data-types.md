@@ -6,8 +6,8 @@ prev_page:
   url: /solutions/index
   title: 'Exercise Solutions'
 next_page:
-  url: /solutions/02-dataframes-in-julia
-  title: '2. DataFrames in Julia'
+  url: /solutions/02-functions-control-flow
+  title: '2. Functions & Control Flow'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

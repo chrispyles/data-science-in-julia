@@ -46,6 +46,10 @@
   sections:
     - title: Functions
       url: 02-functions-control-flow/01-functions
+    - title: Conditionals
+      url: 02-functions-control-flow/02-conditionals
+    - title: Control Flow
+      url: 02-functions-control-flow/03-control-flow
 
 - divider: true
 
@@ -77,6 +81,10 @@
   sections:
     - title: 1. The Basic Data Types
       url: solutions/01-basic-data-types
-    - title: 2. DataFrames in Julia
-      url: solutions/02-dataframes-in-julia
-      not_numbered: true
+      #not_numbered: true
+    - title: 2. Functions & Control Flow
+      url: solutions/02-functions-control-flow
+      #not_numbered: true
+    - title: 3. DataFrames in Julia
+      url: solutions/03-dataframes-in-julia
+      #not_numbered: true

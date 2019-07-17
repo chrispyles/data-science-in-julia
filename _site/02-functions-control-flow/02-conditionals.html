@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>DataFrames.jl</title>
-  <meta name="description" content="DataFrames.jl">
+  <title>Conditionals</title>
+  <meta name="description" content="Conditionals">
 
-  <link rel="canonical" href="http://0.0.0.0:4000/03-builtins/01-dataframes.html">
+  <link rel="canonical" href="http://0.0.0.0:4000/02-functions-control-flow/02-conditionals.html">
   <link rel="alternate" type="application/rss+xml" title="Data Science in Julia" href="http://0.0.0.0:4000/feed.xml">
 
-  <meta property="og:url"         content="http://0.0.0.0:4000/03-builtins/01-dataframes.html" />
+  <meta property="og:url"         content="http://0.0.0.0:4000/02-functions-control-flow/02-conditionals.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="DataFrames.jl" />
-<meta property="og:description" content="DataFrames.jl" />
+<meta property="og:title"       content="Conditionals" />
+<meta property="og:description" content="Conditionals" />
 <meta property="og:image"       content="" />
 
 
@@ -25,15 +25,15 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "http://0.0.0.0:4000/03-builtins/01-dataframes.html",
+    "http://0.0.0.0:4000/02-functions-control-flow/02-conditionals.html",
   "headline":
-    "DataFrames.jl",
+    "Conditionals",
   "datePublished":
     "2019-07-16T23:30:34-05:00",
   "dateModified":
     "2019-07-16T23:30:34-05:00",
   "description":
-    "DataFrames.jl",
+    "Conditionals",
   "author": {
     "@type": "Person",
     "name": "Christopher Pyles"
@@ -559,7 +559,7 @@ initFunction(initQuery);
 
           
 
-          <ul class="c-sidebar__sections u-hidden-visually">
+          <ul class="c-sidebar__sections ">
             
               
               
@@ -584,7 +584,7 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
+                <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/02-functions-control-flow/02-conditionals.html"
                 >
                   
@@ -659,13 +659,13 @@ initFunction(initQuery);
 
           
 
-          <ul class="c-sidebar__sections ">
+          <ul class="c-sidebar__sections u-hidden-visually">
             
               
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
+                <a class="c-sidebar__entry "
                   href="/03-builtins/01-dataframes.html"
                 >
                   
@@ -846,12 +846,13 @@ initFunction(initQuery);
     <nav class="onthispage">
       <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
       <ul class="toc__menu">
-  <li><a href="#constructing-a-dataframe">Constructing a DataFrame</a></li>
-  <li><a href="#slicing-dataframes">Slicing DataFrames</a>
+  <li><a href="#if-else-statements">If-Else Statements</a>
     <ul>
-      <li><a href="#column-labels">Column Labels</a></li>
+      <li><a href="#else-if">Else If</a></li>
     </ul>
   </li>
+  <li><a href="#ternary-operator">Ternary Operator</a></li>
+  <li><a href="#short-circuit-evaluation">Short-Circuit Evaluation</a></li>
   <li><a href="#exercises">Exercises</a></li>
 </ul>
     </nav>
@@ -885,198 +886,139 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="dataframesjl">DataFrames.jl</h1>
+              <h1 id="conditionals">Conditionals</h1>
 
-<p>The most rudimentary implementation of labeled rectangular data in Julia comes from Julia’s DataFrames.jl package. Similar to the relationship of the <code class="highlighter-rouge">data.frame</code> class to R, the DataFrames.jl package contains the default representation of labeled rectangular data in Julia, the DataFrame. DataFrames in Julia are very similar to R’s <code class="highlighter-rouge">data.frame</code> in that the rows are indexed and the column labels are represented by symbols rather than strings, as in Python.</p>
+<p>This section covers the if-else statement in Julia and the ternary operator, and contains a short discussion of short-circuit evaluation in Julia.</p>
 
-<p>Unlike R, however, DataFrames.jl is not automatically included in the Julia distribution. It must be installed locally (see <a href="">Installing Dependencies</a>) and then loaded in each notebook with the <code class="highlighter-rouge">using</code> command:</p>
+<h2 id="if-else-statements">If-Else Statements</h2>
 
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">using</span> <span class="n">DataFrames</span>
+<p>Julia conditionals are comprised of an <code class="highlighter-rouge">if</code> statement and and optional <code class="highlighter-rouge">else</code> statement, followed by the <code class="highlighter-rouge">end</code> keyword. The <code class="highlighter-rouge">if</code> statement requires a boolean predicate value.</p>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">boolean</span>
+    <span class="c"># do something</span>
+<span class="k">else</span>
+    <span class="c"># do something else</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<h2 id="constructing-a-dataframe">Constructing a <code class="highlighter-rouge">DataFrame</code></h2>
-
-<p>To construct a DataFrame, the simplest method is to use the class constructor, <code class="highlighter-rouge">DataFrame</code>. A DataFrame represents column labels as symbols internally, so when we declare a DataFrame, we input the columns as keyword arguments and pass to these arrays of values, all of the same type. Let’s say that we wanted to construct the following data set in Julia:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Sex</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>F</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <td>M</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <td>M</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <td>F</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <td>M</td>
-      <td>25</td>
-    </tr>
-    <tr>
-      <td>F</td>
-      <td>23</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>We could apply the class constructor as follows:</p>
-
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DataFrame</span><span class="x">(</span>
-    <span class="n">Sex</span> <span class="o">=</span> <span class="x">[</span><span class="s">"F"</span><span class="x">,</span> <span class="s">"M"</span><span class="x">,</span> <span class="s">"M"</span><span class="x">,</span> <span class="s">"F"</span><span class="x">,</span> <span class="s">"M"</span><span class="x">,</span> <span class="s">"F"</span><span class="x">],</span>
-    <span class="n">Age</span> <span class="o">=</span> <span class="x">[</span><span class="mi">19</span><span class="x">,</span> <span class="mi">18</span><span class="x">,</span> <span class="mi">20</span><span class="x">,</span> <span class="mi">22</span><span class="x">,</span> <span class="mi">25</span><span class="x">,</span> <span class="mi">23</span><span class="x">]</span>
-<span class="x">)</span>
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span>
+    <span class="n">print</span><span class="x">(</span><span class="s">"true"</span><span class="x">)</span>
+<span class="k">else</span>
+    <span class="n">print</span><span class="x">(</span><span class="s">"false"</span><span class="x">)</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<div class="output output_html">
-<table class="data-frame"><thead><tr><th></th><th>Sex</th><th>Age</th></tr><tr><th></th><th>String</th><th>Int64</th></tr></thead><tbody><p>6 rows × 2 columns</p><tr><th>1</th><td>F</td><td>19</td></tr><tr><th>2</th><td>M</td><td>18</td></tr><tr><th>3</th><td>M</td><td>20</td></tr><tr><th>4</th><td>F</td><td>22</td></tr><tr><th>5</th><td>M</td><td>25</td></tr><tr><th>6</th><td>F</td><td>23</td></tr></tbody></table>
-</div>
-
-<p>As you can see, the data are constructed using the keyword arguments that we passed as labels. One interesting thing is that the rows are indexed, just as they are in, for example, <code class="highlighter-rouge">pandas</code> in Python. Also, note that the DataFrame shows us the type of each element in the column. For example, if we were isntead to declare the <code class="highlighter-rouge">Age</code> variable as <code class="highlighter-rouge">Int32</code>s, it would show show in the column header:</p>
-
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="x">(</span>
-    <span class="n">Sex</span> <span class="o">=</span> <span class="x">[</span><span class="s">"F"</span><span class="x">,</span> <span class="s">"M"</span><span class="x">,</span> <span class="s">"M"</span><span class="x">,</span> <span class="s">"F"</span><span class="x">,</span> <span class="s">"M"</span><span class="x">,</span> <span class="s">"F"</span><span class="x">],</span>
-    <span class="n">Age</span> <span class="o">=</span> <span class="kt">Int32</span><span class="x">[</span><span class="mi">19</span><span class="x">,</span> <span class="mi">18</span><span class="x">,</span> <span class="mi">20</span><span class="x">,</span> <span class="mi">22</span><span class="x">,</span> <span class="mi">25</span><span class="x">,</span> <span class="mi">23</span><span class="x">]</span>
-<span class="x">)</span>
+<div class="output output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>true
 </code></pre></div></div>
 
-<div class="output output_html">
-<table class="data-frame"><thead><tr><th></th><th>Sex</th><th>Age</th></tr><tr><th></th><th>String</th><th>Int32</th></tr></thead><tbody><p>6 rows × 2 columns</p><tr><th>1</th><td>F</td><td>19</td></tr><tr><th>2</th><td>M</td><td>18</td></tr><tr><th>3</th><td>M</td><td>20</td></tr><tr><th>4</th><td>F</td><td>22</td></tr><tr><th>5</th><td>M</td><td>25</td></tr><tr><th>6</th><td>F</td><td>23</td></tr></tbody></table>
-</div>
+<h3 id="else-if">Else If</h3>
 
-<h2 id="slicing-dataframes">Slicing DataFrames</h2>
+<p>It is also possible to provide <code class="highlighter-rouge">elseif</code> clauses to the conditional to check for mutiple possible outcomes.</p>
 
-<p>The ability to extract data from columns and rows is very important, and DataFrames.jl includes some nice syntax for slicing a DataFrame. We can slice DataFrames as we do any other 2-dimensional representation in Julia (i.e. matrices), the same way as in R. DataFrames allow subsetting using bracket <code class="highlighter-rouge">[]</code> notation, and the basic subsetting of a DataFrame is accomplished using row and column indices:</p>
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number</span> <span class="o">=</span> <span class="s">"three"</span>
 
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># multiple rows and columns</span>
-<span class="n">df</span><span class="x">[</span><span class="mi">4</span><span class="x">:</span><span class="o">-</span><span class="mi">1</span><span class="x">:</span><span class="mi">3</span><span class="x">,</span> <span class="mi">2</span><span class="x">:</span><span class="o">-</span><span class="mi">1</span><span class="x">:</span><span class="mi">1</span><span class="x">]</span>
+<span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="s">"one"</span>
+    <span class="n">print</span><span class="x">(</span><span class="mi">1</span><span class="x">)</span>
+<span class="k">elseif</span> <span class="n">number</span> <span class="o">==</span> <span class="s">"two"</span>
+    <span class="n">print</span><span class="x">(</span><span class="mi">2</span><span class="x">)</span>
+<span class="k">elseif</span> <span class="n">number</span> <span class="o">==</span> <span class="s">"three"</span>
+    <span class="n">print</span><span class="x">(</span><span class="mi">3</span><span class="x">)</span>
+<span class="k">elseif</span> <span class="n">number</span> <span class="o">==</span> <span class="s">"four"</span>
+    <span class="n">print</span><span class="x">(</span><span class="mi">4</span><span class="x">)</span>
+<span class="k">else</span>
+    <span class="n">print</span><span class="x">(</span><span class="s">"not 1, 2, 3, or 4"</span><span class="x">)</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<div class="output output_html">
-<table class="data-frame"><thead><tr><th></th><th>Age</th><th>Sex</th></tr><tr><th></th><th>Int32</th><th>String</th></tr></thead><tbody><p>2 rows × 2 columns</p><tr><th>1</th><td>22</td><td>F</td></tr><tr><th>2</th><td>20</td><td>M</td></tr></tbody></table>
-</div>
-
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># single column, multiple rows</span>
-<span class="n">df</span><span class="x">[</span><span class="mi">1</span><span class="x">:</span><span class="mi">2</span><span class="x">,</span> <span class="mi">1</span><span class="x">]</span>
+<div class="output output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
 </code></pre></div></div>
 
-<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2-element Array{String,1}:
- "F"
- "M"
+<h2 id="ternary-operator">Ternary Operator</h2>
+
+<p>For quick-and-dirty evaluations, Julia provides a ternary operator which is similar to those of many other languages. It uses <code class="highlighter-rouge">? :</code> syntax:</p>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">predicate</span> <span class="o">?</span> <span class="n">value_if_true</span> <span class="x">:</span> <span class="n">value_if_false</span>
 </code></pre></div></div>
 
-<p>As you can see, selecting multiple rows and columns in the slice returns a new DataFrame with the indices reset and selecting a single column returns an array of the values for that column in the selected rows. If you do not pass a tuple to the bracket (e.g. <code class="highlighter-rouge">df[2]</code>), it returns the column at that index. Finally, subsetting a DataFrame to select a single row returns a <code class="highlighter-rouge">DataFrameRow</code> object, which is acts similar to a 1-row DataFrame. The details of this type can be find by calling <code class="highlighter-rouge">?DataFrameRow</code> in Jupyter.</p>
+<p>For example, you could assign a value based on whether or not some other value is even or odd:</p>
 
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># single row, multiple columns</span>
-<span class="n">df</span><span class="x">[</span><span class="mi">3</span><span class="x">,</span><span class="mi">1</span><span class="x">:</span><span class="mi">2</span><span class="x">]</span>
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">?</span> <span class="mi">1</span> <span class="x">:</span> <span class="mi">0</span>
 </code></pre></div></div>
 
-<div class="output output_html">
-<p>DataFrameRow</p><table class="data-frame"><thead><tr><th></th><th>Sex</th><th>Age</th></tr><tr><th></th><th>String</th><th>Int32</th></tr></thead><tbody><p>1 rows × 2 columns</p><tr><th>3</th><td>M</td><td>20</td></tr></tbody></table>
-</div>
-
-<h3 id="column-labels">Column Labels</h3>
-
-<p>In a DataFrame, the column labels are not represented as strings, as in so many other languages, but as <a href="https://stackoverflow.com/questions/23480722/what-is-a-symbol-in-julia">symbols</a>. This means that DataFrame columns can be accessed using labels in two ways: either through normal slicing with bracket notation, or by accessing them as an attribute of the <code class="highlighter-rouge">DataFrame</code> class. The bracket notation is as one would expect:</p>
-
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="x">[:</span><span class="n">Sex</span><span class="x">]</span>
+<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0
 </code></pre></div></div>
 
-<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6-element Array{String,1}:
- "F"
- "M"
- "M"
- "F"
- "M"
- "F"
+<h2 id="short-circuit-evaluation">Short-Circuit Evaluation</h2>
+
+<p>Finally, Julia short-circuits evaluation of compound expressions using <code class="highlighter-rouge">&amp;&amp;</code> and <code class="highlighter-rouge">||</code> as in most other languages:</p>
+
+<ul>
+  <li>Evaluation of <code class="highlighter-rouge">A &amp;&amp; B</code> stops if <code class="highlighter-rouge">A</code> is <code class="highlighter-rouge">false</code> and returns <code class="highlighter-rouge">false</code>.</li>
+  <li>Evaluation of <code class="highlighter-rouge">A || B</code> stops if <code class="highlighter-rouge">A</code> is <code class="highlighter-rouge">true</code> and returns <code class="highlighter-rouge">true</code>.</li>
+</ul>
+
+<p>Because <code class="highlighter-rouge">⊻</code> requires the left and right predicates to be different, its evaluation cannot be short-circuited.</p>
+
+<p>As a demonstration, consider the conditional below. <code class="highlighter-rouge">B</code> is not defined, but this won’t error because the evaluation will short-circuit upon evaluating <code class="highlighter-rouge">A</code> in each case and thus <code class="highlighter-rouge">B</code> is never evaluated.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">A</span> <span class="o">=</span> <span class="n">false</span>
+<span class="k">if</span> <span class="o">!</span><span class="x">(</span><span class="n">A</span> <span class="o">&amp;&amp;</span> <span class="n">B</span><span class="x">)</span>
+    <span class="n">println</span><span class="x">(</span><span class="s">"&amp;&amp; short-circuited"</span><span class="x">)</span>
+<span class="k">end</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">true</span>
+<span class="k">if</span> <span class="n">A</span> <span class="o">||</span> <span class="n">B</span>
+    <span class="n">println</span><span class="x">(</span><span class="s">"|| short-circuited"</span><span class="x">)</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<p>To access columns as class attributes, use the dot notation that Julia provides to access attributes of any class:</p>
+<div class="output output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&amp;&amp; short-circuited
+|| short-circuited
 
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="o">.</span><span class="n">Sex</span>
-</code></pre></div></div>
-
-<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6-element Array{String,1}:
- "F"
- "M"
- "M"
- "F"
- "M"
- "F"
 </code></pre></div></div>
 
 <h2 id="exercises">Exercises</h2>
 
-<p><strong>Exercise 1.1.1:</strong> Construct a DataFrame that encodes the following data table:</p>
+<p><strong>Exercise 2.2.1:</strong> Write a function <code class="highlighter-rouge">print_name(name::String)</code> which prints out the name <code class="highlighter-rouge">name</code> only if it’s length is greater than 0. If the length is 0, it should print out <code class="highlighter-rouge">"Name string is empty."</code>.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Year</th>
-      <th>Midterm Grade</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Jen</td>
-      <td>Sophomore</td>
-      <td>93</td>
-    </tr>
-    <tr>
-      <td>Neil</td>
-      <td>Junior</td>
-      <td>88</td>
-    </tr>
-    <tr>
-      <td>Lea</td>
-      <td>Junior</td>
-      <td>86</td>
-    </tr>
-    <tr>
-      <td>Richard</td>
-      <td>Sophomore</td>
-      <td>75</td>
-    </tr>
-    <tr>
-      <td>Penelope</td>
-      <td>Sophomore</td>
-      <td>78</td>
-    </tr>
-  </tbody>
-</table>
+<p><em>Hint:</em> You can use <code class="highlighter-rouge">length(s)</code> to get the length of a string <code class="highlighter-rouge">s</code>.</p>
 
-<p><em>Hint</em>: Remember that you can include underscores in symbols using the <code class="highlighter-rouge">:a_b</code> notation, or you can create a symbol from a string using <code class="highlighter-rouge">Symbol("A String")</code>.</p>
+<p><strong>Exercise 2.2.2:</strong> Following each line below, write the value of <code class="highlighter-rouge">x</code>.</p>
 
-<p><strong>Exercise 1.1.2:</strong> Create a <code class="highlighter-rouge">DataFrameRow</code> object that contains Lea’s midterm information.</p>
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">?</span> <span class="mi">0</span> <span class="x">:</span> <span class="mi">1</span>          <span class="c"># x = ____</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">?</span> <span class="mi">2</span> <span class="x">:</span> <span class="mi">0</span>         <span class="c"># x = ____</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">true</span> <span class="o">&amp;&amp;</span> <span class="n">false</span> <span class="o">?</span> <span class="mi">3</span> <span class="x">:</span> <span class="mi">5</span>  <span class="c"># x = ____</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span> <span class="o">?</span> <span class="mi">2</span> <span class="x">:</span> <span class="o">-</span><span class="mi">1</span>        <span class="c"># x = ____</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="x">:</span> <span class="mi">4</span>         <span class="c"># x = ____</span>
+</code></pre></div></div>
 
-<p><strong>Exercise 1.1.3:</strong> Using the function <code class="highlighter-rouge">Statistics.mean</code>, compute the mean of the midterm scores. Do not hardcode the answer, but use a function which accepts an array.</p>
+<p><strong>Exercise 2.2.3:</strong> For each line below, determine whether or not the line will error in evaluation. If a line errors, assume it is not executed. Assume that <code class="highlighter-rouge">A = true</code>, <code class="highlighter-rouge">B = false</code>, and <code class="highlighter-rouge">C = true</code> have already been set.</p>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">A</span> <span class="o">&amp;&amp;</span> <span class="n">B</span>                     <span class="c"># Error? ____</span>
+<span class="n">A</span> <span class="o">&amp;&amp;</span> <span class="n">D</span>                     <span class="c"># Error? ____</span>
+<span class="n">A</span> <span class="o">||</span> <span class="n">C</span>                     <span class="c"># Error? ____</span>
+<span class="n">B</span> <span class="o">&amp;&amp;</span> <span class="n">E</span>                     <span class="c"># Error? ____</span>
+<span class="n">C</span> <span class="o">||</span> <span class="n">D</span>                     <span class="c"># Error? ____</span>
+<span class="n">C</span> <span class="o">&amp;&amp;</span> <span class="x">(</span><span class="n">A</span> <span class="o">||</span> <span class="n">B</span><span class="x">)</span>              <span class="c"># Error? ____</span>
+<span class="n">B</span> <span class="o">&amp;&amp;</span> <span class="x">(</span><span class="n">A</span> <span class="o">||</span> <span class="n">D</span><span class="x">)</span>              <span class="c"># Error? ____</span>
+<span class="n">A</span> <span class="o">&amp;&amp;</span> <span class="x">(</span><span class="n">C</span> <span class="o">&amp;&amp;</span> <span class="n">D</span><span class="x">)</span>              <span class="c"># Error? ____</span>
+<span class="n">B</span> <span class="n">⊻</span> <span class="n">D</span>                      <span class="c"># Error? ____</span>
+</code></pre></div></div>
+
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/03-builtins/index">
-      〈 <span class="u-margin-right-tiny"></span> DataFrames in Julia
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/02-functions-control-flow/01-functions">
+      〈 <span class="u-margin-right-tiny"></span> Functions
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/03-builtins/02-categorical-arrays">
-      Categorical Arrays <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/02-functions-control-flow/03-control-flow">
+      Control Flow <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>DataFrames.jl</title>
-  <meta name="description" content="DataFrames.jl">
+  <title>Control Flow</title>
+  <meta name="description" content="Control Flow">
 
-  <link rel="canonical" href="http://0.0.0.0:4000/03-builtins/01-dataframes.html">
+  <link rel="canonical" href="http://0.0.0.0:4000/02-functions-control-flow/03-control-flow.html">
   <link rel="alternate" type="application/rss+xml" title="Data Science in Julia" href="http://0.0.0.0:4000/feed.xml">
 
-  <meta property="og:url"         content="http://0.0.0.0:4000/03-builtins/01-dataframes.html" />
+  <meta property="og:url"         content="http://0.0.0.0:4000/02-functions-control-flow/03-control-flow.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="DataFrames.jl" />
-<meta property="og:description" content="DataFrames.jl" />
+<meta property="og:title"       content="Control Flow" />
+<meta property="og:description" content="Control Flow" />
 <meta property="og:image"       content="" />
 
 
@@ -25,15 +25,15 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "http://0.0.0.0:4000/03-builtins/01-dataframes.html",
+    "http://0.0.0.0:4000/02-functions-control-flow/03-control-flow.html",
   "headline":
-    "DataFrames.jl",
+    "Control Flow",
   "datePublished":
     "2019-07-16T23:30:34-05:00",
   "dateModified":
     "2019-07-16T23:30:34-05:00",
   "description":
-    "DataFrames.jl",
+    "Control Flow",
   "author": {
     "@type": "Person",
     "name": "Christopher Pyles"
@@ -559,7 +559,7 @@ initFunction(initQuery);
 
           
 
-          <ul class="c-sidebar__sections u-hidden-visually">
+          <ul class="c-sidebar__sections ">
             
               
               
@@ -603,7 +603,7 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
+                <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/02-functions-control-flow/03-control-flow.html"
                 >
                   
@@ -659,13 +659,13 @@ initFunction(initQuery);
 
           
 
-          <ul class="c-sidebar__sections ">
+          <ul class="c-sidebar__sections u-hidden-visually">
             
               
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
+                <a class="c-sidebar__entry "
                   href="/03-builtins/01-dataframes.html"
                 >
                   
@@ -846,12 +846,13 @@ initFunction(initQuery);
     <nav class="onthispage">
       <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
       <ul class="toc__menu">
-  <li><a href="#constructing-a-dataframe">Constructing a DataFrame</a></li>
-  <li><a href="#slicing-dataframes">Slicing DataFrames</a>
+  <li><a href="#while-loops">While Loops</a>
     <ul>
-      <li><a href="#column-labels">Column Labels</a></li>
+      <li><a href="#break-statements">Break Statements</a></li>
+      <li><a href="#continue-statements">Continue Statements</a></li>
     </ul>
   </li>
+  <li><a href="#for-loops">For Loops</a></li>
   <li><a href="#exercises">Exercises</a></li>
 </ul>
     </nav>
@@ -885,198 +886,153 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="dataframesjl">DataFrames.jl</h1>
+              <h1 id="control-flow">Control Flow</h1>
 
-<p>The most rudimentary implementation of labeled rectangular data in Julia comes from Julia’s DataFrames.jl package. Similar to the relationship of the <code class="highlighter-rouge">data.frame</code> class to R, the DataFrames.jl package contains the default representation of labeled rectangular data in Julia, the DataFrame. DataFrames in Julia are very similar to R’s <code class="highlighter-rouge">data.frame</code> in that the rows are indexed and the column labels are represented by symbols rather than strings, as in Python.</p>
+<h2 id="while-loops">While Loops</h2>
 
-<p>Unlike R, however, DataFrames.jl is not automatically included in the Julia distribution. It must be installed locally (see <a href="">Installing Dependencies</a>) and then loaded in each notebook with the <code class="highlighter-rouge">using</code> command:</p>
+<p>Julia’s <code class="highlighter-rouge">while</code> loop syntax is similar to that of many other languages:</p>
 
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">using</span> <span class="n">DataFrames</span>
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="n">predictate</span>
+    <span class="c"># do something</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<h2 id="constructing-a-dataframe">Constructing a <code class="highlighter-rouge">DataFrame</code></h2>
+<p>As with all languages, it is important to make sure that the predicate has a teminating condition so that you don’t end up in an infinite loop.</p>
 
-<p>To construct a DataFrame, the simplest method is to use the class constructor, <code class="highlighter-rouge">DataFrame</code>. A DataFrame represents column labels as symbols internally, so when we declare a DataFrame, we input the columns as keyword arguments and pass to these arrays of values, all of the same type. Let’s say that we wanted to construct the following data set in Julia:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Sex</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>F</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <td>M</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <td>M</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <td>F</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <td>M</td>
-      <td>25</td>
-    </tr>
-    <tr>
-      <td>F</td>
-      <td>23</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>We could apply the class constructor as follows:</p>
-
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DataFrame</span><span class="x">(</span>
-    <span class="n">Sex</span> <span class="o">=</span> <span class="x">[</span><span class="s">"F"</span><span class="x">,</span> <span class="s">"M"</span><span class="x">,</span> <span class="s">"M"</span><span class="x">,</span> <span class="s">"F"</span><span class="x">,</span> <span class="s">"M"</span><span class="x">,</span> <span class="s">"F"</span><span class="x">],</span>
-    <span class="n">Age</span> <span class="o">=</span> <span class="x">[</span><span class="mi">19</span><span class="x">,</span> <span class="mi">18</span><span class="x">,</span> <span class="mi">20</span><span class="x">,</span> <span class="mi">22</span><span class="x">,</span> <span class="mi">25</span><span class="x">,</span> <span class="mi">23</span><span class="x">]</span>
-<span class="x">)</span>
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span>
+    <span class="n">print</span><span class="x">(</span><span class="n">string</span><span class="x">(</span><span class="n">i</span><span class="x">)</span> <span class="o">*</span> <span class="s">" "</span><span class="x">)</span>
+    <span class="n">i</span> <span class="o">*=</span> <span class="mi">2</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<div class="output output_html">
-<table class="data-frame"><thead><tr><th></th><th>Sex</th><th>Age</th></tr><tr><th></th><th>String</th><th>Int64</th></tr></thead><tbody><p>6 rows × 2 columns</p><tr><th>1</th><td>F</td><td>19</td></tr><tr><th>2</th><td>M</td><td>18</td></tr><tr><th>3</th><td>M</td><td>20</td></tr><tr><th>4</th><td>F</td><td>22</td></tr><tr><th>5</th><td>M</td><td>25</td></tr><tr><th>6</th><td>F</td><td>23</td></tr></tbody></table>
-</div>
-
-<p>As you can see, the data are constructed using the keyword arguments that we passed as labels. One interesting thing is that the rows are indexed, just as they are in, for example, <code class="highlighter-rouge">pandas</code> in Python. Also, note that the DataFrame shows us the type of each element in the column. For example, if we were isntead to declare the <code class="highlighter-rouge">Age</code> variable as <code class="highlighter-rouge">Int32</code>s, it would show show in the column header:</p>
-
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="x">(</span>
-    <span class="n">Sex</span> <span class="o">=</span> <span class="x">[</span><span class="s">"F"</span><span class="x">,</span> <span class="s">"M"</span><span class="x">,</span> <span class="s">"M"</span><span class="x">,</span> <span class="s">"F"</span><span class="x">,</span> <span class="s">"M"</span><span class="x">,</span> <span class="s">"F"</span><span class="x">],</span>
-    <span class="n">Age</span> <span class="o">=</span> <span class="kt">Int32</span><span class="x">[</span><span class="mi">19</span><span class="x">,</span> <span class="mi">18</span><span class="x">,</span> <span class="mi">20</span><span class="x">,</span> <span class="mi">22</span><span class="x">,</span> <span class="mi">25</span><span class="x">,</span> <span class="mi">23</span><span class="x">]</span>
-<span class="x">)</span>
+<div class="output output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 2 4 8 
 </code></pre></div></div>
 
-<div class="output output_html">
-<table class="data-frame"><thead><tr><th></th><th>Sex</th><th>Age</th></tr><tr><th></th><th>String</th><th>Int32</th></tr></thead><tbody><p>6 rows × 2 columns</p><tr><th>1</th><td>F</td><td>19</td></tr><tr><th>2</th><td>M</td><td>18</td></tr><tr><th>3</th><td>M</td><td>20</td></tr><tr><th>4</th><td>F</td><td>22</td></tr><tr><th>5</th><td>M</td><td>25</td></tr><tr><th>6</th><td>F</td><td>23</td></tr></tbody></table>
-</div>
+<p>(Note the <code class="highlighter-rouge">*</code> above; in Julia, string concatenation is performed with this operator, as opposed to the more standard <code class="highlighter-rouge">+</code>.)</p>
 
-<h2 id="slicing-dataframes">Slicing DataFrames</h2>
+<h3 id="break-statements">Break Statements</h3>
 
-<p>The ability to extract data from columns and rows is very important, and DataFrames.jl includes some nice syntax for slicing a DataFrame. We can slice DataFrames as we do any other 2-dimensional representation in Julia (i.e. matrices), the same way as in R. DataFrames allow subsetting using bracket <code class="highlighter-rouge">[]</code> notation, and the basic subsetting of a DataFrame is accomplished using row and column indices:</p>
+<p>Julia’s <code class="highlighter-rouge">while</code> loops also support break statements, which stop and exit the loop when evaluated. To include a break, include the keyword <code class="highlighter-rouge">break</code>:</p>
 
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># multiple rows and columns</span>
-<span class="n">df</span><span class="x">[</span><span class="mi">4</span><span class="x">:</span><span class="o">-</span><span class="mi">1</span><span class="x">:</span><span class="mi">3</span><span class="x">,</span> <span class="mi">2</span><span class="x">:</span><span class="o">-</span><span class="mi">1</span><span class="x">:</span><span class="mi">1</span><span class="x">]</span>
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="n">predicate</span>
+    <span class="c"># do something</span>
+    <span class="k">if</span> <span class="n">predicate</span>
+        <span class="n">break</span>
+    <span class="k">end</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<div class="output output_html">
-<table class="data-frame"><thead><tr><th></th><th>Age</th><th>Sex</th></tr><tr><th></th><th>Int32</th><th>String</th></tr></thead><tbody><p>2 rows × 2 columns</p><tr><th>1</th><td>22</td><td>F</td></tr><tr><th>2</th><td>20</td><td>M</td></tr></tbody></table>
-</div>
+<p>An example of this is given below.</p>
 
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># single column, multiple rows</span>
-<span class="n">df</span><span class="x">[</span><span class="mi">1</span><span class="x">:</span><span class="mi">2</span><span class="x">,</span> <span class="mi">1</span><span class="x">]</span>
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">println</span><span class="x">(</span><span class="s">"Without break statement:"</span><span class="x">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">25</span>
+    <span class="n">print</span><span class="x">(</span><span class="n">string</span><span class="x">(</span><span class="n">i</span><span class="x">)</span> <span class="o">*</span> <span class="s">" "</span><span class="x">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">3</span>
+<span class="k">end</span>
+
+<span class="n">println</span><span class="x">(</span><span class="s">"</span><span class="se">\n</span><span class="s">With break statement:"</span><span class="x">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">25</span>
+    <span class="n">print</span><span class="x">(</span><span class="n">string</span><span class="x">(</span><span class="n">i</span><span class="x">)</span> <span class="o">*</span> <span class="s">" "</span><span class="x">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">18</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="n">break</span>
+    <span class="k">end</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">3</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2-element Array{String,1}:
- "F"
- "M"
+<div class="output output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Without break statement:
+3 6 9 12 15 18 21 24 
+With break statement:
+3 6 9 12 15 18 
 </code></pre></div></div>
 
-<p>As you can see, selecting multiple rows and columns in the slice returns a new DataFrame with the indices reset and selecting a single column returns an array of the values for that column in the selected rows. If you do not pass a tuple to the bracket (e.g. <code class="highlighter-rouge">df[2]</code>), it returns the column at that index. Finally, subsetting a DataFrame to select a single row returns a <code class="highlighter-rouge">DataFrameRow</code> object, which is acts similar to a 1-row DataFrame. The details of this type can be find by calling <code class="highlighter-rouge">?DataFrameRow</code> in Jupyter.</p>
+<h3 id="continue-statements">Continue Statements</h3>
 
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># single row, multiple columns</span>
-<span class="n">df</span><span class="x">[</span><span class="mi">3</span><span class="x">,</span><span class="mi">1</span><span class="x">:</span><span class="mi">2</span><span class="x">]</span>
+<p>Julia also supports continue statements, which skip the rest of the loop evaluation <em>in the current loop</em> when evaluated. When using <code class="highlighter-rouge">continue</code> statements, it is <strong>very important</strong> that your increment is <em>before</em> the <code class="highlighter-rouge">continue</code> predicate, or else you will end up in an infinite loop.</p>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="n">predicate</span>
+    <span class="c"># do something</span>
+    <span class="n">increment</span>
+    <span class="k">if</span> <span class="n">predicate</span>
+        <span class="n">continue</span>
+    <span class="k">end</span>
+    <span class="c"># do something</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<div class="output output_html">
-<p>DataFrameRow</p><table class="data-frame"><thead><tr><th></th><th>Sex</th><th>Age</th></tr><tr><th></th><th>String</th><th>Int32</th></tr></thead><tbody><p>1 rows × 2 columns</p><tr><th>3</th><td>M</td><td>20</td></tr></tbody></table>
-</div>
+<p>Consider the example below, which only prints odd numbers.</p>
 
-<h3 id="column-labels">Column Labels</h3>
-
-<p>In a DataFrame, the column labels are not represented as strings, as in so many other languages, but as <a href="https://stackoverflow.com/questions/23480722/what-is-a-symbol-in-julia">symbols</a>. This means that DataFrame columns can be accessed using labels in two ways: either through normal slicing with bracket notation, or by accessing them as an attribute of the <code class="highlighter-rouge">DataFrame</code> class. The bracket notation is as one would expect:</p>
-
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="x">[:</span><span class="n">Sex</span><span class="x">]</span>
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="n">continue</span>
+    <span class="k">end</span>
+    <span class="n">print</span><span class="x">(</span><span class="n">string</span><span class="x">(</span><span class="n">i</span><span class="x">)</span> <span class="o">*</span> <span class="s">" "</span><span class="x">)</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6-element Array{String,1}:
- "F"
- "M"
- "M"
- "F"
- "M"
- "F"
+<div class="output output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 3 5 7 9 
 </code></pre></div></div>
 
-<p>To access columns as class attributes, use the dot notation that Julia provides to access attributes of any class:</p>
+<h2 id="for-loops">For Loops</h2>
 
-<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="o">.</span><span class="n">Sex</span>
+<p>Julia’s <code class="highlighter-rouge">for</code> loop syntax is similar to that of Python. It uses the <code class="highlighter-rouge">in</code> operator to iterate through the elements of an array or other iterable.</p>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">element</span> <span class="k">in</span> <span class="n">array</span>
+    <span class="c"># do something</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<div class="output output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6-element Array{String,1}:
- "F"
- "M"
- "M"
- "F"
- "M"
- "F"
+<p><code class="highlighter-rouge">for</code> loops support the use of <code class="highlighter-rouge">break</code> and <code class="highlighter-rouge">continue</code> statements as well. For ranges, it is simple to create an array of integers using <code class="highlighter-rouge">:</code> syntax, e.g. <code class="highlighter-rouge">1:10</code>. These ranges are inclusive at both ends and default to a step size of +1. It is also possible to specify a different step size using a second <code class="highlighter-rouge">:</code>:</p>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">low</span><span class="x">:</span><span class="n">step</span><span class="x">:</span><span class="n">high</span>
+</code></pre></div></div>
+
+<p>For example, the range <code class="highlighter-rouge">10:-2:1</code> is ${10, 8, 6, 4, 2}$. An example for loop is given below.</p>
+
+<div class="language-julia input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">5</span><span class="x">:</span><span class="mi">5</span><span class="x">:</span><span class="mi">100</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">20</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="n">continue</span>
+    <span class="k">end</span>
+    <span class="n">print</span><span class="x">(</span><span class="n">string</span><span class="x">(</span><span class="n">i</span><span class="x">)</span> <span class="o">*</span> <span class="s">" "</span><span class="x">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">17</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="n">break</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="output output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5 10 15 25 30 35 45 50 55 65 70 75 85 
 </code></pre></div></div>
 
 <h2 id="exercises">Exercises</h2>
 
-<p><strong>Exercise 1.1.1:</strong> Construct a DataFrame that encodes the following data table:</p>
+<p><strong>Exercise 2.3.1:</strong> Create a while loop that prints all of the letters in the phrase “data science is fun” but which are not in the word “string”.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Year</th>
-      <th>Midterm Grade</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Jen</td>
-      <td>Sophomore</td>
-      <td>93</td>
-    </tr>
-    <tr>
-      <td>Neil</td>
-      <td>Junior</td>
-      <td>88</td>
-    </tr>
-    <tr>
-      <td>Lea</td>
-      <td>Junior</td>
-      <td>86</td>
-    </tr>
-    <tr>
-      <td>Richard</td>
-      <td>Sophomore</td>
-      <td>75</td>
-    </tr>
-    <tr>
-      <td>Penelope</td>
-      <td>Sophomore</td>
-      <td>78</td>
-    </tr>
-  </tbody>
-</table>
+<p><em>Hint:</em> Create an array of the letters and iterate through the index. You can check if a substring occurs in a larger string using <code class="highlighter-rouge">occursin(substring, big_string)</code>.</p>
 
-<p><em>Hint</em>: Remember that you can include underscores in symbols using the <code class="highlighter-rouge">:a_b</code> notation, or you can create a symbol from a string using <code class="highlighter-rouge">Symbol("A String")</code>.</p>
+<p><strong>Exercise 2.3.2:</strong> Write a for loop to print out all multiples of 3 from 0 to 100 that are not odd. The loop should stop when it hits upon a multiple of 31 <strong>that is not 0</strong>.</p>
 
-<p><strong>Exercise 1.1.2:</strong> Create a <code class="highlighter-rouge">DataFrameRow</code> object that contains Lea’s midterm information.</p>
+<p><strong>Exercise 2.3.3:</strong> Write a function <code class="highlighter-rouge">cosines(start, stop)</code> that returns an array of the cosine of each number in the range <code class="highlighter-rouge">start:stop</code>. Use a for loop to add items to the array.</p>
 
-<p><strong>Exercise 1.1.3:</strong> Using the function <code class="highlighter-rouge">Statistics.mean</code>, compute the mean of the midterm scores. Do not hardcode the answer, but use a function which accepts an array.</p>
+<p><strong>Exercise 2.3.4:</strong> Rewrite your <code class="highlighter-rouge">cosines</code> implementation to allow for a different step size. In this implementation using dot syntax to broadcast the cosine function to each element of the range.</p>
+
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/03-builtins/index">
-      〈 <span class="u-margin-right-tiny"></span> DataFrames in Julia
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/02-functions-control-flow/02-conditionals">
+      〈 <span class="u-margin-right-tiny"></span> Conditionals
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/03-builtins/02-categorical-arrays">
-      Categorical Arrays <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/03-builtins/index">
+      DataFrames in Julia <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

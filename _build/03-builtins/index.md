@@ -3,8 +3,8 @@ interact_link: content/03-builtins/index.ipynb
 kernel_name: julia-1.1
 title: 'DataFrames in Julia'
 prev_page:
-  url: /02-functions-control-flow/01-functions
-  title: 'Functions'
+  url: /02-functions-control-flow/03-control-flow
+  title: 'Control Flow'
 next_page:
   url: /03-builtins/01-dataframes
   title: 'DataFrames.jl'

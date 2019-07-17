@@ -15,7 +15,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 _by Christopher Pyles_
 
-Welcome! This online book is intended to give you an introduction to the forms and packages in the open source language [Julia](https://julialang.org) that are useful in data science. This is not intended to give you an thorough introduction to the Julia language, but is intended to build on top of a good understanding of its basic structures and syntax. To learn the language, the Julia website has some [great resources](https://julialang.org/learning/) to help you get started.
+Welcome! This online book is intended to give you an introduction to the forms and packages in the open source language [Julia](https://julialang.org) that are useful in data science. It begins with a (short) introduction to the language's basic types and syntax, before moving on to Julia's own packages for working with rectangular data and Julia implemetations of Python packages.
 
 ## Why Julia?
 
@@ -32,3 +32,5 @@ This course covers a range of topics related to the practice of data science in 
 * Linear Algebra
 * Implementing Models
 * (Basic) Machine Learning with `ScikitLearn`
+
+ 
